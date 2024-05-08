@@ -58,3 +58,30 @@ Saf fonksiyonlar örneğin yan etkileri ortadan kaldırmak için değişmez duru
 - Fonksiyonların birinci sınıf vatandaşlar olarak kullanılmasıyla ek esneklik
 - Daha fazla şeffaflık, odak noktası fonksiyonlardır ve bireysel kod satırları değil
 - Yan etkilerin fonksiyonlar içindeki yaygın sorunları ortadan kaldıran değişmezlik
+
+# İfade Odaklı
+
+Rust aynı zamanda ifadelerle odaklı bir dil olan, çoğu işlemin bir değer döndürdüğü,
+bir şey döndürmeyen ifadelerin aksine ifadelerin çoğu bir değer döndürdüğü bir programlama tarzıdır.
+İfadelerle odaklı programlama, fonksiyonel programlamanın yakın akrabasıdır.
+Tüm fonksiyonel programlama dilleri aynı zamanda ifadelerle odaklı dillerdir.
+
+Peki bir ifade nedir?
+
+İfadeler bir değer döndürmez ancak yan etkiye sebep olabilir.
+Mümkün yan etkiler, veritabanı manipülasyonu veya paylaşılan bir değişkenin güncellenmesi gibi sınırsız olabilir.
+Gerçekten, bazı ifadelerin amacı yan etkidir.
+
+İfadeler bir veya daha fazla işlemi içeren ve bir değer döndüren, minimal veya hiç yan etkisi olmayan ifadelerdir.
+Saf fonksiyonlar ifadelerin örnekleridir.
+
+Rust'ta ifadeler tercih edilir, hatta if ve while gibi kontrol transfer ifadeleri aslında ifadelerdir.
+
+İfadelerle odaklı programlamanın birçok avantajı şunlardır:
+- Yan etkiler olmadan ifadelerle odaklı programlar daha kolay bakım yapılabilir.
+- Bir ifadenin değeri tamamen arayüzüyle tanımlanır. Bu, ifadelerin daha şeffaf olmasını sağlar.
+- İfadeler arayüz yönlendirildiği için, daha test edilebilirler.
+- İfade odaklı programlama, belgelendirmeyi kolaylaştırır. Yan etkiler olmadan, ifade belgelendirme olarak da kullanılabilir.
+- İfadeler daha kolay bir şekilde birleştirilebilir.
+
+* Kodlar/1.1, Rust'ta hem fonksiyonel hem de ifadelerle odaklı programlamanın bir örneği. 
