@@ -185,7 +185,14 @@ Dizisel programlamadan eşzamanlı programlamaya geçerken genellikle çok iş p
 Genel değişkenleri, paylaşılan veriler olarak kaldırmak, tipik olarak sertifikasyon sürecinde atılan adımlardan biridir.
 Korkusuz eşzamanlılık, sertifikasyona ihtiyacı ortadan kaldırır.
 
-Eşzamanlı programlama genellikle kod yazmanın korkulu rüyası olarak kabul edilir.
-Karmaşıklık ekleyebilir ve uygulamaların bakımını zorlaştırabilir.
-En kötüsü, eşzamanlı programlamadaki sorunlar genellikle çalışma zamanına kadar bulunamaz. 
-Korkusuz eşzamanlılık, eşzamanlı programlama için daha güvenli bir ortam yaratır.
+# Maliyetsiz Soyutlama
+
+Maliyetsiz soyutlama, Rust'ın özelliklerinden biridir. Evet, doğru okudunuz. 
+Bu nedenle, burada bahsedilen son özelliktir. Maliyetsiz soyutlama, Rust özelliklerinin, mümkünse çalışma zamanında performans cezası almadığı ilkesidir.
+Jenerasyonel çöp toplama, Java, C# ve Go gibi birkaç popüler yönetilen dilin içsel bir özelliğidir ve dinamik belleği yönetmek için kullanılır. 
+Çöp toplama maliyetli ve belirlenemeyen bir işlemdir. Bu nedenle, çöp toplamanın ne zaman gerçekleşeceğini asla bilemezsiniz. 
+Buna Rust'ı karşılaştırın, burada hiçbir bellek modeli yok. 
+Gerçekten hiç yok! Önceki bölümde açıklandığı gibi sahiplik, ek maliyet olmadan belirlenebilir bellek yönetimi sağlar.
+Bu, maliyetsiz soyutlamanın bir örneğidir.
+
+
