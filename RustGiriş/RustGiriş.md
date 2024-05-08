@@ -111,4 +111,52 @@ Rust'ta desen odaklı programlamanın birkaç faydası bulunmaktadır:
 
  1_2/ de gösterildiği gibi desen eşleme örneği.
 
- 
+# Özellikler
+
+Rust'a ve popülerliğine katkıda bulunan temel özellikleri inceleyelim.
+
+# Güvenlik
+
+Güvenlik, dili dokunan hemen hemen tüm yönleri etkileyen önemli bir özelliğe sahiptir. 
+Güvenli kod, sağlam, öngörülebilir ve beklenmedik hatalara eğilimli değildir. 
+Bu özelliklerle, Rust güvenle uygulama geliştirebileceğiniz sağlam bir temel sunar.
+Değiştirilemez değişkenler, tek sahiplik ilkesi ve diğer özellikler, bu hedefe katkıda bulunur.
+Ayrıca, Rust, derleme zamanında güvenli kod yazma uygulamalarını zorunlu kılar.
+Ödünç alma denetleyicisi ile sahiplik modeli bunun mükemmel bir örneğidir. 
+Derleme zamanında, ödünç alma denetleyicisi, sahiplik de dahil olmak üzere bir dizi denetleme yapar. 
+Eğer sahiplik kontrolü başarısız olursa, ödünç alma denetleyici bir açıklama sunar ve derleme başarıyla tamamlanmaz.
+
+Rust'ta güvenli koda katkıda bulunan birkaç faktör var:
+- Değiştirilemezlilik varsayılan olarak yapılır, bu da kazara değişiklikleri engeller.
+- Dangling referanslar gibi anti-örüntülerin önlenmesi için uygun ömürlerin zorunlu kılınması
+- Güvenli işaretçiler için referanslar
+- Değişebilen boyutlarda kaynaklar için güvenilir bellek yönetimi için "bir kaynağı edinme işlemi başlatmak" (RAII) stratejisi, örneğin vektörler gibi.
+
+# Sahiplik
+
+Sahiplik özelliği, tek sahip ilkesini kullanarak güvenli bellek erişimi sağlar.
+Bu ilke, değişkenlere tek bir sahip atar ve asla birden fazla sahip olmaz.
+Bu yaklaşım, aynı belleğin sahipliğinin paylaşılmasını önler. 
+Bu yaklaşımla önlenebilecek potansiyel sorunlar arasında yarış koşulları, kararsız değişkenler ve dangle referanslar yer alır.
+
+Tek sahip ilkesini göstermek için bir araba benzetmesi kullanalım. İşte temel gerçekler:
+
+Bir araba var ve Bob onun tek sahibi.
+
+Şimdi iki senaryo var:
+- Bob'un arabası var.
+- Ari zaman zaman aynı arabayı kullanmak istiyor.
+
+Sahip olarak, Bob her zaman arabayı kullanabilir, başka birine ödünç vermedikçe. 
+Başka biri (Ari) arabayı kullanmak istediğinde iki olasılık vardır:
+
+Bob, aracı ya satmak ya da Ari'ye ödünç vermek zorundadır. 
+Her durumda, Bob en azından geçici olarak aracın sahipliğini kaybeder.
+
+Bob aracı Ari'ye ödünç verirse adımlar şöyle olur:
+
+- Bob aracı kullanır.
+- Bob aracı Ari'ye ödünç verir. Ari aracı kullanır. Ari bitirdikten sonra aracı Bob'a geri verir.
+- Bob aracı kullanır.
+
+Ödünç alma denetleyicisi, derleme zamanında doğru sahipliği, ödünç verme dahil, zorunlu kılmaktan sorumludur. 
