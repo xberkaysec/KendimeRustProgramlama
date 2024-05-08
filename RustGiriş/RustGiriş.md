@@ -174,3 +174,18 @@ Bu tür sorunlar derleme zamanında daha iyi izole edilir, çalışma zamanında
 Ömür belirlemenin basit olduğu durumlarda ömür işaretleri gerekli değildir. Ödünç alma denetleyicisi sadece bilecektir. Buna ömür çarpıklığı denir.
 Ömürler özelliğinin faydası, askıda kalan referans endişesi olmadan kararlı bir bellek ortamıdır.
 
+# Korkusuz Eşzamanlılık
+
+Korkusuz eşzamanlılık, önemlidir ve Rust'ın temel özellikler listesine dahil edilmesi gereken bir özelliktir.
+Korkusuz eşzamanlılık, eşzamanlı programlama için güvenli bir ortam sağlar. 
+Bu güvenli ortam, önce bahsedilen özelliklerin faydasıyla oluşturulur. 
+Örneğin, Rust'taki sahiplik modeli, genellikle eşzamanlı programlamadaki yarış koşullarını ortadan kaldırır.
+
+Dizisel programlamadan eşzamanlı programlamaya geçerken genellikle çok iş parçacıklı kodlar için güvenli bir ortamı sağlamak için bir sertifikasyon süreci yapılır. 
+Genel değişkenleri, paylaşılan veriler olarak kaldırmak, tipik olarak sertifikasyon sürecinde atılan adımlardan biridir.
+Korkusuz eşzamanlılık, sertifikasyona ihtiyacı ortadan kaldırır.
+
+Eşzamanlı programlama genellikle kod yazmanın korkulu rüyası olarak kabul edilir.
+Karmaşıklık ekleyebilir ve uygulamaların bakımını zorlaştırabilir.
+En kötüsü, eşzamanlı programlamadaki sorunlar genellikle çalışma zamanına kadar bulunamaz. 
+Korkusuz eşzamanlılık, eşzamanlı programlama için daha güvenli bir ortam yaratır.
