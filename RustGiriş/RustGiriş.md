@@ -160,3 +160,17 @@ Bob aracı Ari'ye ödünç verirse adımlar şöyle olur:
 - Bob aracı kullanır.
 
 Ödünç alma denetleyicisi, derleme zamanında doğru sahipliği, ödünç verme dahil, zorunlu kılmaktan sorumludur. 
+
+# Ömürler(Lifetimes)
+
+Ömürler, Rust'ta artık mevcut olmayan değerlere erişimi engelleyen bir özelliktir.  Bir referans, Rust'ta temel bir işarecidir. 
+İzin verilirse, bırakılan değerlere yanlış erişim, askıda kalan referanslar ve potansiyel program hatası oluşturabilir. 
+Sonuç, istikrarsız ve öngörülemeyen uygulamalar olacaktır. Rust, bu sorunu ömürler modeli ile ortadan kaldırır.
+
+Ödünç alma denetleyicisi ömürleri yönetir. Geçersiz ömürler hakkında derleme zamanında bilgilendirilirsiniz.
+Bu tür sorunlar derleme zamanında daha iyi izole edilir, çalışma zamanında değil.
+
+Ömürlerle ilgili belirsizlik olduğunda, ömür işaretleri, ödünç alma denetleyicisine doğru ömür hakkında ipuçları verir. 
+Ömür belirlemenin basit olduğu durumlarda ömür işaretleri gerekli değildir. Ödünç alma denetleyicisi sadece bilecektir. Buna ömür çarpıklığı denir.
+Ömürler özelliğinin faydası, askıda kalan referans endişesi olmadan kararlı bir bellek ortamıdır.
+
