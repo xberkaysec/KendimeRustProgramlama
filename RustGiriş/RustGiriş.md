@@ -84,4 +84,31 @@ Rust'ta ifadeler tercih edilir, hatta if ve while gibi kontrol transfer ifadeler
 - İfade odaklı programlama, belgelendirmeyi kolaylaştırır. Yan etkiler olmadan, ifade belgelendirme olarak da kullanılabilir.
 - İfadeler daha kolay bir şekilde birleştirilebilir.
 
-* Kodlar/1_1, Rust'ta hem fonksiyonel hem de ifadelerle odaklı programlamanın bir örneği. 
+Kodlar/1_1, Rust'ta hem fonksiyonel hem de ifadelerle odaklı programlamanın bir örneği. 
+
+# Desen Odaklı
+
+Rust programlamada, desenlerin sıkça kullanıldığını söylemek doğru olacaktır.
+Desenler, Rust kodlamasında yaygın olarak bulunur.
+Bu, desen eşleme pratiklerine olan vurgu, Rust programlama tarzının benzersizliğine katkıda bulunur.
+Örneğin, Rust kaynak kodu, C++ veya Java'dan farklı bir görünüme sahiptir!
+
+Desen eşleme genellikle switch ifadeleri ile ilişkilendirilir.
+Örneğin, C++, Java, Go ve diğer dillerde switch ifadesi bulunmaktadır.
+Bu, genellikle string veya integral ifadelerine dayanan tek boyutlu desen eşleme anlamına gelir.
+Rust'ta ise desen eşleme, kullanıcı tanımlı tiplerin ve dizilerin örneklerine genişletilmiştir.
+
+Rust'un bir switch ifadesi yerine bir eşleme ifadesi olan match ifadesi bulunmaktadır.
+Ancak, desen odaklı programlama match ifadesinin ötesine uzanır.
+Rust'ta, herhangi bir ifadenin her örneği, desen eşleme için bir fırsattır.
+Örneğin, hatta basit bir atanma veya koşullu ifade bile desen eşleme ile sonuçlanabilir.
+Bu, kodunuzu yeniden hayal etmenin ilginç yollarını sunar.
+
+Rust'ta desen odaklı programlamanın birkaç faydası bulunmaktadır:
+- Rust'taki desenler oldukça ifadecidir. Bu, karmaşık kodları daha basit ifadelerle birleştirme olanağı sağlar.
+- Rust'ta desen odaklı programlama, ifade odaklı programlamaya tamamlayıcı bir model sunar.
+- Rust, kapsamlı desen eşlemeyi destekler, bu da daha güvenilir ve hata yapmaya daha az yatkındır.
+
+ Kodlar/1_2'de gösterildiği gibi desen eşleme örneği.
+
+ 
