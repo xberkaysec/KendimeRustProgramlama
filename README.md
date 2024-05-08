@@ -1,0 +1,2 @@
+# KendimeRustProgramlama
+Rust Programlama - BerkaySec
