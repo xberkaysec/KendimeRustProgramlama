@@ -28,29 +28,33 @@ Birçok programlama dili etkili bellek yönetimi konusunda zorluklar yaşar.
 
 # Fonksiyonel Programlama
 
-Rust, fonksiyonel programlama, ifade odaklı programlama ve desen odaklı programlama gibi çeşitli programlama paradigmalarını benimser.
+Rust, çeşitli programlama paradigmalarını benimser.
+Bu paradigmalar arasında fonksiyonel programlama, ifade odaklı programlama ve desen odaklı programlama bulunur.
 
 Fonksiyonel programlama nedir? Bu, bir programlama modelidir ki burada fonksiyonlar dilin temel yapı taşlarıdır.
-Fonksiyonel programlamada fonksiyonlar birinci sınıf vatandaşlardır.
+Fonksiyonel programlamada fonksiyonlar birinci sınıf vatandaşlardır. 
 Fonksiyonları normalde bir değişkenin bulunduğu her yerde kullanabilirsiniz: yerel bir değişken, fonksiyon parametresi veya bir fonksiyon dönüş olarak.
 Bir fonksiyon, diğer fonksiyonlarda işlem bile gerçekleştirebilir, bu durum daha yüksek düzeyde bir fonksiyon olarak tanımlanır.
 
 Rust, fonksiyonel programlamayı hafif bir şekilde benimser.
-Dil, tembel değerlendirme, deklaratif programlama tarzı, kuyruk çağrı optimizasyonu gibi fonksiyonel programlamanın her özelliğini içermez.
+Dil, tembel değerlendirme, deklaratif programlama tarzı, kuyruk çağrı optimizasyonu gibi fonksiyonel programlamanın her özelliğini içermez. 
 Ancak, Rust fonksiyonel bir programlama tarzını destekler.
 
-Fonksiyonel programlama dilleri genellikle prosedürel programlama yeteneklerini kısıtlar, örneğin global fonksiyonlar gibi.
+Fonksiyonel programlama dilleri genellikle prosedürel programlama yeteneklerini kısıtlar, örneğin global fonksiyonlar gibi. 
 Bunlar birbirine ters olmadığı için, Rust prosedürel ve fonksiyonel tarzda programlamayı bir araya getirmeye izin verir.
 
-Saf fonksiyonlar, fonksiyonel programlamanın merkezindedir.
+Saf fonksiyonlar, fonksiyonel programlamanın merkezindedir. 
 Bir saf fonksiyon olarak, bir fonksiyon, tamamen fonksiyon arayüzü aracılığıyla tanımlanır.
-Fonksiyon parametreleri ile belirli bir dönüş değeri arasında doğrudan bir ilişki vardır, yan etkiler olmadan. 
+Fonksiyon parametreleri ile belirli bir dönüş değeri arasında doğrudan bir ilişki vardır, yan etkiler olmadan.
 Ek olarak, bir saf fonksiyonun sonuçları tekrarlanabilir olmalıdır.
 Örneğin, sonuçları öngörülemez hale getiren içsel bir rastgele sayıya dayanan bir fonksiyon, saf bir fonksiyon değildir.
 
-Değişmezlik, fonksiyonel programlamanın önemli bir öğesi olup, Rust'ın temel ilkelerinden biridir. Saf fonksiyonlar örneğin yan etkileri ortadan kaldırmak için değişmez duruma ağırlık verir. İşaretçiler, global değişkenler ve referanslar genellikle bir saf fonksiyondan kaçınılarak, bir fonksiyondan sızabilecek yan etkilerin önlenmesi amaçlanır.
+Değişmezlik, fonksiyonel programlamanın önemli bir öğesi olup, Rust'ın temel ilkelerinden biridir.
+Saf fonksiyonlar örneğin yan etkileri ortadan kaldırmak için değişmez duruma ağırlık verir. 
+İşaretçiler, global değişkenler ve referanslar genellikle bir saf fonksiyondan kaçınılarak, bir fonksiyondan sızabilecek yan etkilerin önlenmesi amaçlanır.
 
 Özetlemek gerekirse, fonksiyonel programlama birkaç fayda sunar:
+
 - Fonksiyonların birinci sınıf vatandaşlar olarak kullanılmasıyla ek esneklik
 - Daha fazla şeffaflık, odak noktası fonksiyonlardır ve bireysel kod satırları değil
 - Yan etkilerin fonksiyonlar içindeki yaygın sorunları ortadan kaldıran değişmezlik
