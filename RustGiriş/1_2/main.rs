@@ -9,3 +9,7 @@ fn main() {
     check_even_odd(5);
     check_even_odd(10);
 }
+
+// Çıktı :
+// 5 tektir.
+// 10 çifttir.
