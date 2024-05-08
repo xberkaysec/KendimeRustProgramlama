@@ -84,7 +84,7 @@ Rust'ta ifadeler tercih edilir, hatta if ve while gibi kontrol transfer ifadeler
 - İfade odaklı programlama, belgelendirmeyi kolaylaştırır. Yan etkiler olmadan, ifade belgelendirme olarak da kullanılabilir.
 - İfadeler daha kolay bir şekilde birleştirilebilir.
 
-Kodlar/1_1, Rust'ta hem fonksiyonel hem de ifadelerle odaklı programlamanın bir örneği. 
+1_1/ de, Rust'ta hem fonksiyonel hem de ifadelerle odaklı programlamanın bir örneği. 
 
 # Desen Odaklı
 
@@ -109,6 +109,6 @@ Rust'ta desen odaklı programlamanın birkaç faydası bulunmaktadır:
 - Rust'ta desen odaklı programlama, ifade odaklı programlamaya tamamlayıcı bir model sunar.
 - Rust, kapsamlı desen eşlemeyi destekler, bu da daha güvenilir ve hata yapmaya daha az yatkındır.
 
- Kodlar/1_2'de gösterildiği gibi desen eşleme örneği.
+ 1_2/ de gösterildiği gibi desen eşleme örneği.
 
  
