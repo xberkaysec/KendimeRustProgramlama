@@ -1,4 +1,3 @@
 # Konular
 
-- Rust'a Giriş
-    - [Rust Giriş](RustGiriş/)
+- [Rust'a Giriş](RustGiriş/)
