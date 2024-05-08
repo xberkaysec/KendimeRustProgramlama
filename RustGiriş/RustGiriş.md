@@ -54,5 +54,3 @@ Değişmezlik, fonksiyonel programlamanın önemli bir öğesi olup, Rust'ın te
 - Fonksiyonların birinci sınıf vatandaşlar olarak kullanılmasıyla ek esneklik
 - Daha fazla şeffaflık, odak noktası fonksiyonlardır ve bireysel kod satırları değil
 - Yan etkilerin fonksiyonlar içindeki yaygın sorunları ortadan kaldıran değişmezlik
-
-- 
