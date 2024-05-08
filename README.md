@@ -1,2 +1,1 @@
-# KendimeRustProgramlama
-Rust Programlama - BerkaySec
+# Konular
