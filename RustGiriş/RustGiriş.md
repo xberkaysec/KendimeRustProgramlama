@@ -84,4 +84,4 @@ Rust'ta ifadeler tercih edilir, hatta if ve while gibi kontrol transfer ifadeler
 - İfade odaklı programlama, belgelendirmeyi kolaylaştırır. Yan etkiler olmadan, ifade belgelendirme olarak da kullanılabilir.
 - İfadeler daha kolay bir şekilde birleştirilebilir.
 
-* Kodlar/1.1, Rust'ta hem fonksiyonel hem de ifadelerle odaklı programlamanın bir örneği. 
+* Kodlar/1_1, Rust'ta hem fonksiyonel hem de ifadelerle odaklı programlamanın bir örneği. 
