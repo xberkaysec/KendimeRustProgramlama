@@ -192,3 +192,7 @@ Derlenen ikili dosya, release modunda bulunan release dizinine yerleştirilir.
 Bu optimizasyonlar genellikle kodun daha hızlı çalışmasını ve daha küçük boyutlara sahip olmasını sağlar. 
 Bu nedenle, --release bayrağı ikili dosyanın daha optimize edilmiş bir sürümünü oluşturur.
 
+Eğer bir executable crate'inizi çalıştırmak istiyorsanız, ``cargo run`` komutunu kullanabilirsiniz. 
+Bu komutun da paketin içinden çalıştırılması gerekmektedir. Eğer daha önce ikili dosya oluşturulmadıysa, önce cargo build komutu otomatik olarak çalıştırılacaktır. 
+Bu nedenle, bazıları executable crate'ler için ayrı bir build adımını tamamen atlayarak sadece cargo run komutuna güvenirler.
+Bu sayede ikili dosyayı oluşturup çalıştırmak için ayrı ayrı adımlarla uğraşmaya gerek kalmaz.
