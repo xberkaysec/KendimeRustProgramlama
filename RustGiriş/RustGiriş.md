@@ -197,3 +197,40 @@ Bu, maliyetsiz soyutlamanın bir örneğidir.
 
 # Rust Metodolojisi
 
+Birçok teknoloji, programlama dilleri de dahil olmak üzere, kendi terminolojilerine sahiptir. 
+Bu terminolojiyi öğrenmek, akranlarınızla ve geniş Rust topluluğundaki diğer kişilerle iletişim kurmanıza yardımcı olabilir.
+
+Rust için motif, taşınma kasaları olan "crates"tir.
+
+Rust: En önemli terimle başlayalım: "Rust" kendisi. Rust, bir akronim veya özel bir teknoloji terimi değildir.
+Rust adı, yaşayan bitkilere saldıran güçlü bir patojen olan pas mantarından gelmektedir.
+
+Orijinal Rust tasarımcısı Graydon Hoare, şu açıklamayı yapmıştır: "Ona fungi adını verdim. Paslar inanılmaz yaratıklardır."
+
+Crate: Bir crate, Rust'ta bir derleme birimidir. 
+Yürütülebilir, kütüphane veya harici crates en yaygın olanlardır.
+
+Yürütülebilir crate: Bir yürütülebilir crate, diğer cratelardan bağımsız olarak başlatılabilen bir ikili yürütülebilir dosyadır.
+
+Kütüphane crate: Kütüphane crateleri, diğer cratelere hizmetler sağlar ve bağımsız olarak yürütülmez.
+
+Harici crate: Harici crateler, harici bağımlılıklardır. Örneğin, Crate A, Crate B'yi referans alır, ancak Crate B aynı pakette değildir. 
+Bu nedenle, Crate B, Crate A için bir harici crate veya bağımlılıktır.
+
+Paketler: Bir paket, belirli bir hizmet sağlayan birden fazla crate içerir. 
+Paketler, birden fazla yürütülebilir crate ve olası bir kütüphane crate içerebilir.
+
+Modüller: Rust'taki modüller, diğer programlama dillerinden gelen isim alanlarına benzerdir. 
+Modülleri kullanarak bir crate içinde hiyerarşik bir program yapısı oluşturabilirsiniz.
+Modüller ayrıca isim çakışmalarını önlemeye yardımcı olur.
+
+Cargo: Rust'ta birkaç cargo varlığı vardır, bu da crates motifini genişletir (cargo kasaları).
+
+Cargo aracı: Cargo aracı, Rust paket yöneticisidir.
+
+Cargo.toml: Cargo.toml dosyası, Rust için manifest ve yapılandırma dosyasıdır.
+
+Cargo.lock: Cargo.lock dosyası, tüm bağımlılıkların belirli sürümleri ile bir kaydı tutar.
+
+RS: RS (Rust source), Rust kaynak dosyaları için uzantıdır.
+
