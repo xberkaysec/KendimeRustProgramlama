@@ -249,3 +249,33 @@ Böylece, projenizin dışındaki bu harici bağımlılıkları projenize dahil 
 Son olarak, projenizi derlemek ve yönetmek için Cargo aracını kullanabilirsiniz. 
 Cargo, belirtilen bağımlılıkları indirip yükleyerek, projenizi derleyip çalıştırmanıza olanak tanır. 
 Cargo.lock dosyası ise tüm bu bağımlılıkların belirli sürümlerinin kaydını tutar ve projenizin bağımlılıklarının güvenli bir şekilde yönetilmesini sağlar. 
+
+# Araçlar(Tools)
+
+Rust ortamı, Rust kaynak kodunu derlemeden, rust toolunu yüklemeye, deposu publize edilene kadar çeşitli hizmetler sunan birçok araca ev sahipliği yapmaktadır. 
+Bu araçları anlamak, üretkenliğinizi arttıracaktır. 
+
+- Rustup aracı: Rustup aracı, Rust kurulum aracıdır. Ayrıca araç takımını da kurar.
+- Rust yükleyicisini https://rustup.rs adresinden indirebilirsiniz. Rust'u başarılı bir şekilde yüklemek için oradaki talimatları takip edin.
+
+- Cargo aracı: Cargo, paket yöneticisi olarak temel rolü olan çok amaçlı bir araçtır.
+- Ek hizmetler arasında kod derleme, kaynak kodu biçimlendirme ve yeni crateler oluşturma bulunmaktadır.
+
+İşte bir kütüphane crate oluşturan bir Cargo ifadesi:
+
+cargo new --lib mylib
+
+- Rustc aracı: Rustc, Rust derleyicisidir. Rustc, bir Rust kaynak dosyasını (.rs) çalıştırılabilir veya kütüphane ikiliye derleyebilir.
+
+İşte basit bir crate oluşturmak için Rustc ifadesi:
+
+$ rustc kaynak.rs
+
+- Rustdoc aracı: Rustdoc aracı, Rust kaynak dosyasına gömülmüş belge yorumlarını HTML'de render edilmiş bir yardım belgesine derler.
+
+- Clippy aracı: Clippy, çeşitli linterlardan oluşan kapsamlı bir test aracıdır.
+Bu araç, kodunuza fayda sağlayabilecek yaygın problemleri ve en iyi uygulamaları tanımlar.
+
+- Rustfmt aracı: Rustfmt aracı, Rust için stil kılavuzlarına uygun olarak kaynak dosyalarını yeniden biçimlendirir.
+
+Cargo, Rust ortamında kilit bir araçtır. Çevrenizi ve paketlerinizi korumak için gereken görevlerin birçoğunu yapmak için Cargo'yu kullanabilirsiniz.
