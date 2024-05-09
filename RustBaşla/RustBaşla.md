@@ -37,3 +37,7 @@ Windows için Cargo'nun İndirilmesi ve Kurulması:
 2. Sayfanın alt kısmında Windows bölümünde bulunan "rustup-init.exe" dosyasını indirin ve çalıştırın.
 3. Yükleme sırasında, Rust programlama dilini ve Cargo aracını yüklemek istediğinizi belirten adımları takip edin.
 
+# “Hello, World”
+
+2_1/ "Merhaba, Dünya" uygulamasını göstermektedir. Aktarım kontrol ifadesi olmadan çalışır sırayla, "Hello, World!" metnini görüntüler ve ardından çıkar.
+
