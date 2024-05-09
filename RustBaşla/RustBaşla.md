@@ -113,7 +113,39 @@ error: aborting due to previous error
 For more information about this error, try `rustc --explain E0423`.
 ```
 
-Rust derleyicisinin konuşkanlığına rağmen, derleme sırasında ilgili tüm hata bilgilerini görüntülemek zaman zaman pratik değildir. 
-Bu durumda, bir hata tanımlayıcısı sağlanır. 
-```rustc --explain erroridentifier```  komutunu kullanarak ek hata bilgilerini görüntüleyebilirsiniz. 
-Ek bilgiler, hatanın ayrıntılı bir açıklamasını, sorunun düzeltilmesine ilişkin önerileri, örnek kodu ve daha fazlasını içerir.
+# Cargo
+
+Rust crate'lerini derlemek ve binary dosyalar oluşturmak için doğrudan rustc derleyicisini kullanmak yerine cargo aracını kullanabilirsiniz. 
+Cargo, farklı görevleri yerine getirebilen çok yönlü bir araçtır. 
+Bu görevler arasında paket oluşturma ve yönetme, binary dosyaları derleme, güvenli bir ortam sağlama ve bağımlılıkları yönetme bulunur. 
+Derleme işlemi için cargo, rustc derleyicisine işleri devreder.
+
+Bu aracın esnekliği sayesinde, Rust kullanıcıları genellikle derleme için rustc yerine cargo'yu tercih ederler. 
+Ayrıca, bu durum sadece tek bir komut satırı arayüzü öğrenme anlamına gelir, iki farklı araç yerine. 
+Çoğu Rust kullanıcısı zaten cargo'yu paket oluşturmak gibi bir şeyler için kullanıyordur ve 
+farklı bir araca geçiş yapmak yerine aynı aracı kullanmak daha basittir.
+Ancak unutmayın ki, rustc aracı dolaylı yoldan hâlâ kullanılmaya devam edecektir.
+
+Örneğin, ```cargo new``` komutu, ya yürütülebilir ya da kütüphane tipinde bir crate için yeni bir paket oluşturur. 
+Varsayılan olarak yürütülebilir bir crate oluşturulur. 
+Kütüphane tipinde bir crate oluşturmak için ise ```--lib``` seçeneği kullanılır.
+
+```
+cargo new name
+```
+
+cargo new komutu aynı zamanda yeni paket için bir dizin yapısı da oluşturur. 
+Başlangıçta bu, bir ana dizin ve src alt dizinini içerir. İhtiyaç duyulduğunda araç daha fazla dizin ekleyecektir.
+Ana dizinde .gitignore ve cargo.toml adlı iki dosya bulunur.  Bu, dizin yapısının temelini oluşturur. 
+src alt dizininde ise, yürütülebilir veya kütüphane paketi olmasına bağlı olarak main.rs veya lib.rs crate dosyası yer alır.
+
+```
+cargo init
+```
+
+.gitignore dosyası, GitHub'tan hariç tutulan dizinleri ve dosyaları listeler. 
+Başlangıçta, derlenmiş binary dosyaları içeren hedef alt dizini ve cargo.lock dosyası bu listede bulunur.
+Cargo.toml, paket için manifest ve yapılandırma dosyasıdır. TOML eki, Tom’s Obvious Minimal Language'e bir göndermedir ve okunabilir bir yapılandırma dosyası için standart bir formattır. 
+Cargo.toml, paketle ilgili önemli yapılandırma detaylarını içerir, paketin adı da dahil olmak üzere. 
+cargo new komutu, gösterildiği gibi başlangıç cargo.toml dosyasını oluşturur 2_2/ dosyasını inceleyin.
+
