@@ -196,3 +196,28 @@ Eğer bir executable crate'inizi çalıştırmak istiyorsanız, ``cargo run`` ko
 Bu komutun da paketin içinden çalıştırılması gerekmektedir. Eğer daha önce ikili dosya oluşturulmadıysa, önce cargo build komutu otomatik olarak çalıştırılacaktır. 
 Bu nedenle, bazıları executable crate'ler için ayrı bir build adımını tamamen atlayarak sadece cargo run komutuna güvenirler.
 Bu sayede ikili dosyayı oluşturup çalıştırmak için ayrı ayrı adımlarla uğraşmaya gerek kalmaz.
+
+# Kütüphane(Library)
+
+Cargo kullanarak bir kütüphane oluşturduğunuzda, temel fark "main.rs" yerine "lib.rs" dosyasının oluşturulmasıdır ve 
+"Hello, World" uygulaması yerine basit bir matematiksel işlemi gerçekleştiren bir fonksiyon içeren örnek kod bulunur. 
+Tüm bunlar bir birim testi içinde gerçekleşir. Aşağıdaki komut yeni bir paket oluşturur ve içinde bir kütüphane oluşturur:
+
+```
+cargo new --lib paketismi
+```
+
+Yürütülebilir binary dosyaların aksine, kütüphaneler kendiliğinden çalışmazlar. 
+Kütüphane için kaynak kodunu bir birim testi içine yerleştirmek, o kodu yürütmek için bir mekanizma sağlar. 
+
+Kütüphane crate aşağıdaki komutla çalıştırabilirsiniz:
+
+```
+cargo test
+```
+
+Bu komut, kütüktecratede bir birim testleri çalıştıracaktır. 
+lib.rs için, bu kütüphanedeki kaynak kodunu yürüterek test etme olanağı sağlar. 
+Sonuç olarak, cargo test komutu birim testinin başarılı olup olmadığını gösterir.
+2_3/, cargo'nun oluşturduğu lib.rs'yi örnek kod içererek gösterir.
+
