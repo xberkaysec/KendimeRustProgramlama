@@ -66,3 +66,54 @@ Ana işlevde, println! macrosu "Hello, World!" mesajını ekrana yazdırır.
 Fonksiyon blokları ifadeler, statements ve macro içerebilir. 
 Rust'ta macroların adından sonra ünlem işareti (!) bulunur. 
 Çoğu durumda, ifadeler ve deyimler noktalı virgül ile sonlandırılır.
+
+# Derle ve Çalıştır
+
+Rust, bir programın gerçek bir binary dosyasına derlendiği, yüksek performanslı bir programlama dilidir. 
+Rust, yürütme için sanal bir makine gerektirmeyen natively compiled (doğrudan derlenen) bir dildir.
+Bu da demek oluyor ki, Rust projeleri derlendikten sonra bağımsız çalışabilen binary dosyalar haline gelir ve Rust'ın kurulu olmadığı herhangi bir yerde çalıştırılabilir.
+
+Rust'un derleyicisi rustc, Rust projelerini derlemek için kullanılır ve Rust'ta yazılan programların natively compiled (doğrudan derlenen) bir biçimde yürütülmesini sağlar. 
+rustc, farklı platformlara uygun olarak farklı türde binary dosyalar oluşturabilir. 
+Örneğin, Linux için oluşturulan binary dosyalar genellikle ELF (Executable and Linkable Format) dosyası şeklinde oluşturulurken, 
+Windows platformu için taşınabilir yürütülebilir dosyalar (PE - Portable Executable) oluşturabilir.
+
+Bu sayede Rust, hızlı, güvenli ve platformlar arası destek sağlayan bir programlama dilidir ve projelerin bağımsız bir şekilde çalışmasını mümkün kılar.
+
+Burada, rustc aracı "Hello, World" crate'ini çalıştırılabilir bir binary dosyaya derler:
+
+```shell
+rustc main.rs
+```
+
+Yürütülebilir crate derlendiğinde iki dosya oluşturulur:
+
+- cratename.exe: Bu çalıştırılabilir binary dosyadır.
+- cratename.pdb: Bu PDB (program veritabanı), sembolik adlar ve kaynak satırı bilgileri gibi binaryle ilgili meta verileri içerir.
+GDB gibi hata ayıklayıcılar, geliştiricilere kullanıcı dostu tanılama bilgileri sunmak için bu PDB dosyasını okur.
+
+rustc, main.rs kaynak dosyasından main.exe ve main.pdb dosyalarını oluşturur.
+rustc derleyicisi konuşkandır, ayrıntılı uyarılar ve hata mesajları sağlar. 
+Daha fazla ayrıntı için referanslar da sağlanabilir. 
+
+İşte println! makrosu zorunlu ünlem işareti olmadan yanlış kullanıldığında görüntülenen derleyici hata mesajı.
+
+```
+error[E0423]: expected function, found macro `print`
+--> main.rs:2:2
+|
+2 | println("Hello, world!");
+| ^^^^^ not a function
+|
+help: use `!` to invoke the macro
+|
+2 | print!("Hello, world!");
+| +
+error: aborting due to previous error
+For more information about this error, try `rustc --explain E0423`.
+```
+
+Rust derleyicisinin konuşkanlığına rağmen, derleme sırasında ilgili tüm hata bilgilerini görüntülemek zaman zaman pratik değildir. 
+Bu durumda, bir hata tanımlayıcısı sağlanır. 
+```rustc --explain erroridentifier```  komutunu kullanarak ek hata bilgilerini görüntüleyebilirsiniz. 
+Ek bilgiler, hatanın ayrıntılı bir açıklamasını, sorunun düzeltilmesine ilişkin önerileri, örnek kodu ve daha fazlasını içerir.
