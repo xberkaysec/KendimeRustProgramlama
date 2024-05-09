@@ -234,3 +234,18 @@ Cargo.lock: Cargo.lock dosyası, tüm bağımlılıkların belirli sürümleri i
 
 RS: RS (Rust source), Rust kaynak dosyaları için uzantıdır.
 
+Rust terminolojisindeki kavramların gerçek projelerde nasıl kullanılabileceğini hakkında,
+Örneğin, bir Rust projesi oluşturduğunuzu ve bu projede bazı kütüphanelere ihtiyacınız olduğunu varsayalım. 
+Bu durumda, projenizin ana klasöründe Cargo.toml dosyasını oluşturarak bu kütüphaneleri belirtmeniz gerekecektir.
+Bu dosyada, projenizin bağımlılıklarını ve diğer yapılandırma ayarlarını tanımlayabilirsiniz.
+
+Aynı projede, farklı işlevleri yerine getiren modüller oluşturabilirsiniz. 
+Örneğin, bir matematik işlevlerini içeren bir modül ve bir dosya işlemlerini içeren başka bir modül oluşturabilirsiniz. 
+Bu modüller sayesinde, kodunuzu daha organize bir şekilde tutabilir ve daha iyi okunabilir hale getirebilirsiniz.
+
+Projenizde kullanmak istediğiniz harici crate'ler için de Cargo.toml dosyasına bu crate'leri ekleyebilirsiniz.
+Böylece, projenizin dışındaki bu harici bağımlılıkları projenize dahil edebilir ve kullanabilirsiniz.
+
+Son olarak, projenizi derlemek ve yönetmek için Cargo aracını kullanabilirsiniz. 
+Cargo, belirtilen bağımlılıkları indirip yükleyerek, projenizi derleyip çalıştırmanıza olanak tanır. 
+Cargo.lock dosyası ise tüm bu bağımlılıkların belirli sürümlerinin kaydını tutar ve projenizin bağımlılıklarının güvenli bir şekilde yönetilmesini sağlar. 
