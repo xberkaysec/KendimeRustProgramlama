@@ -195,4 +195,5 @@ Buna Rust'ı karşılaştırın, burada hiçbir bellek modeli yok.
 Gerçekten hiç yok! Önceki bölümde açıklandığı gibi sahiplik, ek maliyet olmadan belirlenebilir bellek yönetimi sağlar.
 Bu, maliyetsiz soyutlamanın bir örneğidir.
 
+# Rust Metodolojisi
 
