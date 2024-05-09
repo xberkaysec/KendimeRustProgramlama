@@ -175,3 +175,20 @@ Cargo build komutu varsayılan olarak bir debug hedefi oluşturur.
 Bir debug ikilisi, hata ayıklamak için ideal olan, hatalı yatırımlar yapmayan optimizasyonlara sahiptir. 
 Release ikilisi ise çoğunlukla performans veya boyut için optimize edilir.
 ```cargo build --release``` komutu, release dizinine yerleştirilen bir release ikilisi oluşturur.
+
+Özet geçecek olursak,
+
+cargo build komutu, Rust projesini derlemek için kullanılır.
+Bu komut, proje dosyalarını derleyerek ikili dosyalar oluşturur ve çalıştırılabilir bir program oluşturur.
+Bununla birlikte, --release bayrağı olmadan kullanıldığında, derleme işlemi daha hızlı tamamlanır ancak oluşturulan ikili dosyalar optimize edilmemiş olur. 
+Bu nedenle, --release bayrağı olmadan kullanıldığında, derlenen kod hızlıca test etmek veya hata ayıklamak için kullanılabilirken,
+optimize edilmiş bir sürüm elde etmek amacıyla --release bayrağı kullanmak daha mantıklı olabilir.
+
+cargo build --release komutu, Rust projesinin optimize edilmiş bir sürümünün derlenmesini sağlar. 
+Bu komut, üretim ortamlarında kullanılmak üzere en iyi performansı elde etmek için kodu optimize eder. 
+Derlenen ikili dosya, release modunda bulunan release dizinine yerleştirilir.
+
+--release bayrağı, derlenen ikili dosuyun en iyi performansı sağlamak için optimize edilmesini sağlar. 
+Bu optimizasyonlar genellikle kodun daha hızlı çalışmasını ve daha küçük boyutlara sahip olmasını sağlar. 
+Bu nedenle, --release bayrağı ikili dosyanın daha optimize edilmiş bir sürümünü oluşturur.
+
