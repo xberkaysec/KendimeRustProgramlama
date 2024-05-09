@@ -149,3 +149,29 @@ Cargo.toml, paket için manifest ve yapılandırma dosyasıdır. TOML eki, Tom�
 Cargo.toml, paketle ilgili önemli yapılandırma detaylarını içerir, paketin adı da dahil olmak üzere. 
 cargo new komutu, gösterildiği gibi başlangıç cargo.toml dosyasını oluşturur 2_2/ dosyasını inceleyin.
 
+cargo.toml dosyasında aşağıdaki bilgiler sunulmaktadır:
+- name: Paket adı, cargo new komutundan türetilir.
+- version: Üç parçalı anlamsal sürüm (major.minor.patch).
+- edition: Mevcut Rust dil sürümü.
+- dependency: Bağımlılıklar bu bölümde belgelenir.
+- comments: # karakteri bir yoruma işaret eder, satırın sonuna kadar devam eder.
+
+cargo new komutu cargo.toml dosyasını oluşturur. Lisans bilgileri, kısa bir açıklama ve belgelerin konumu gibi bilgiler el ile TOML dosyasına eklenebilir.
+Cargo.toml dosyasının yanı sıra, cargo new komutu src alt dizininde bir kaynak dosyası oluşturur. 
+Yürütülebilir bir kasa için, bu "Hello, World" uygulaması için örnek kod içeren main.rs dosyasıdır.
+Tabii ki, bunu gerçek kodunuzla değiştirmekte özgürsünüz.
+
+Aşağıdaki gibi bir komutla kasayı derleyebilir ve binary yürütülebilir dosyayı oluşturabilirsiniz:
+
+```
+cargo build
+```
+
+Bu komut paket içinden çalıştırılmalıdır. Cargo build komutu artımlı bir derleme yapar.
+Kasaya yapılan değişiklikler, cargo.toml'deki bağımlılıkların değiştirilmesi ve diğer nedenler artımlı bir derleme yerine tam bir derlemeyi gerektirebilir.
+
+Cargo build komutu bir target/ dizini oluşturur. Bu dizinin içinde, binary hedefin türüne bağlı olarak bir debug veya release dizini oluşturulur. 
+Cargo build komutu varsayılan olarak bir debug hedefi oluşturur. 
+Bir debug ikilisi, hata ayıklamak için ideal olan, hatalı yatırımlar yapmayan optimizasyonlara sahiptir. 
+Release ikilisi ise çoğunlukla performans veya boyut için optimize edilir.
+```cargo build --release``` komutu, release dizinine yerleştirilen bir release ikilisi oluşturur.
