@@ -221,3 +221,9 @@ lib.rs için, bu kütüphanedeki kaynak kodunu yürüterek test etme olanağı s
 Sonuç olarak, cargo test komutu birim testinin başarılı olup olmadığını gösterir.
 2_3/, cargo'nun oluşturduğu lib.rs'yi örnek kod içererek gösterir.
 
+lib.rs kütüphanesini inceleyelim. Dosya #cfg(test) açıklaması ile başlar. 
+Bu açıklama, cargo build komutuna birim testlerini ihmal etmesini ve sonuç ikili dosyasına dahil etmemesini istemektedir.
+Dosya içinde her bir birim testi #test açıklaması ile etiketlenir. 
+Örnek bir birim testi basit bir toplama işlemi gerçekleştirir. İşlem sonucu, asserteq! makrosu içinde beklenen değerle karşılaştırılır. 
+Kodu birim testlerde, kütüphanenizin belirli genel fonksiyonlarına referans vermek için güncellemelisiniz. 
+Kütüphanedeki her genel fonksiyon için bir birim test olmalıdır.
