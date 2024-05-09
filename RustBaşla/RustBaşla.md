@@ -41,3 +41,28 @@ Windows için Cargo'nun İndirilmesi ve Kurulması:
 
 2_1/ "Merhaba, Dünya" uygulamasını göstermektedir. Aktarım kontrol ifadesi olmadan çalışır sırayla, "Hello, World!" metnini görüntüler ve ardından çıkar.
 
+Şimdi programı inceleyelim.
+
+Öncelikle çalıştırılabilir sandık için kaynak kodu .rs uzantılı bir dosyaya kaydedilir, main.rs gibi.
+Bu, Rust kaynak dosyaları için standart uzantıdır.
+Rust'ta fonksiyonların önünde fn anahtar sözcüğü bulunur.
+İşlev adı, parametreler ve varsa dönüş değeri takip eder. 
+
+İşte bir fonksiyonun sözdizimi:
+
+```rust
+fn func_name(parameters)->returnval
+```
+
+Snake case, Rust'ta fonksiyonlar için kullanılan adlandırma kurallarıdır.
+Bu kural için, her kelime fonksiyon adının küçük harfle başlaması ve her bir kelimenin
+işlev adının her bir kelimesi küçük harfle başlar ve her bir kelime alt çizgi ile ayrılır.
+
+main fonksiyonu, bir Rust çalıştırılabilir sandığı için giriş noktası fonksiyonudur ve uygulamanın başlangıç noktasıdır.
+Rust'ta ana fonksiyonumuzun fonksiyon parametreleri veya açık dönüş değeri yoktur.
+Bir fonksiyonun kodu, bir fonksiyonu sınırlayan küme parantezleri {} içinde kapsüllenir.
+Ana fonksiyon için, program ana fonksiyon bloğunun sonunda sona erer. Uygulama için birincil iş parçacığıdır.
+Ana işlevde, println! macrosu "Hello, World!" mesajını ekrana yazdırır.
+Fonksiyon blokları ifadeler, statements ve macro içerebilir. 
+Rust'ta macroların adından sonra ünlem işareti (!) bulunur. 
+Çoğu durumda, ifadeler ve deyimler noktalı virgül ile sonlandırılır.
