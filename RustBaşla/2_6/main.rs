@@ -1,4 +1,4 @@
-// # Examples
+/// # Examples
 ///
 /// ```
 /// let greeting=hello::hello_world("hiIN");
