@@ -265,16 +265,24 @@ Bu kod, verilen dil koduna (`language`), karşılık gelen bir "hello world" met
 3. İfade, dil koduna (`language`) bağlı olarak farklı bir metin döndürür.
 4. Eğer belirtilen dil kodu (`language`) desteklenmiyorsa, varsayılan olarak "Hello, world!" metni döndürülür.
 
-//! <b>Hello kütüphane paketi</b>
-//! <p>Yazar: Donis Marshall</p>
-//! <p>Apache 2.0 Lisansı</p>
-
-Belgelendirme yorumları, genellikle mevcut kasanın yerine geçen üst öğeye uygulanan yorumlardır.
-Aşağıda, işaretleme dahil olmak üzere hello kütüphane paketi için belgelendirme örneği bulunmaktadır:
-
-Belgelere örnek kod eklemek de mümkündür. Bu, uygulama kullanıcılarına çok d
-eğerli bir rehberlik sağlayabilir. 
 Belgelerdeki örnek kodlar ayrıca birim testleri olarak da çalıştırılabilir.
 Örnek kodu Belgeler bölümüne yerleştirin.
 Bölümler /// # karakterleri ile belirtilir. /// ve # arasında bir boşluk olduğuna dikkat edin. 
 Kod parçacığını üç ters tırnak (///```) ile baştan ve sondan çerçeveleyin. 2_6/ örnek kodu göstermektedir.
+
+Belgelendirme yorumları ve normal yorumlar, genellikle kodun farklı yönlerini açıklamak veya belgelemek için kullanılır, ancak farklı amaçlar için tasarlanmışlardır.
+
+1. **Belgelendirme Yorumları**:
+   - Kodun işlevselliğini, kullanımını ve örneklerini açıklamak için kullanılır.
+   - Genellikle dokümantasyon oluşturma araçları tarafından işlenir ve belgelendirme dökümanlarını oluşturmak için kullanılır.
+   - Belirli bir biçim ve yapıya sahip olabilirler (örneğin, Rust'ta `///` veya `//!` ile başlarlar).
+   - Kodun kullanımını gösteren örnekler, işlevlerin ne yaptığını açıklayan açıklamalar ve genel olarak projenin nasıl çalıştığını belirten bilgiler içerebilirler.
+
+2. **Normal Yorumlar**:
+   - Kodun okunabilirliğini artırmak, kodun amaçlarını ve mantığını diğer geliştiricilere veya kendinize açıklamak için kullanılır.
+   - Kodun yorumlanması ve anlaşılması için gerekli olmayan bilgileri içerebilirler.
+   - Genellikle kodun anlaşılmasını kolaylaştırmak ve bakımını yapmak için kullanılır.
+   - Belirli bir biçim gerektirmezler ve farklı dillerde farklı biçimlerde yazılabilirler.
+
+Genel olarak, belgelendirme yorumları daha yapılandırılmış ve belirli bir belgeleme amacı için kullanılırken,
+normal yorumlar genellikle kodun anlaşılmasını ve bakımını kolaylaştırmak için kullanılır.
