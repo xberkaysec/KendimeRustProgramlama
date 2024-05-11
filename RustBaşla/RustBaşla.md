@@ -238,7 +238,19 @@ Rust, C tarzı yorumları destekler.
 // karakterleri bir yorumu başlatır ve satırın sonuna kadar devam ettirir. 
 Çok satırlı yorumları / ve / karakterleri arasında çerçeveleyebilirsiniz.
 
-2_4 numaralı Listede, “Merhaba, Dünya” kaynak koduna yazarı, 
+2_4/ dosyada, “Merhaba, Dünya” kaynak koduna yazarı, 
 kaynak dosyasını ve uygulamanın amacını tanımlayan yorumlar eklenmiştir. 
 Hem çok satırlı hem de tek satırlı yorumlar gösterilmiştir.
 
+Rust ayrıca belgelendirme yorumlarını destekler. Belgelendirme yorumları rustdoc aracını kullanarak HTML sayfasına derlenir. 
+Bu araç otomatik olarak Rust araç zincirine dahildir. Belgelendirme yorumları derlendiğinde, {package} / hedef / doc / {package} dizininde birkaç HTML dosyası oluşturulur. 
+Ana HTML dosyası index.html'dir ve herhangi bir tarayıcıda açılabilir.
+
+Belgelendirme için tek satırlı ve çok satırlı yorumlar bulunmaktadır - her ikisi de markdown'u destekler.
+Tek satırlı belgelendirme yorumları /// karakterlerini kullanır. 
+Çok satırlı belgelendirme yorumları / ve / karakterleri arasına alınır. 
+Belgelendirme yorumları kaynak dosyasındaki bir sonraki varlık için geçerlidir, örneğin bir struct veya bir fonksiyon için.
+Şimdi başka bir "Merhaba, Dünya" uygulamasının sürümüne bakalım - bir kütüphane paketi olarak. 
+Bu kütüphane, çeşitli dillerde bir selam döndüren hello_world fonksiyonunu ortaya çıkarır. 
+Fonksiyon, "Merhaba, Dünya!" mesajını göstermek için bir ana-minor dil kodunu kullanarak belirli bir dil seçen bir parametreyi kabul eder. 
+2_5/ dosyası, belgelendirme yorumlarıyla fonksiyonu göstermektedir.
