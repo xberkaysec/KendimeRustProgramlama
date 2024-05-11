@@ -254,3 +254,27 @@ Belgelendirme yorumları kaynak dosyasındaki bir sonraki varlık için geçerli
 Bu kütüphane, çeşitli dillerde bir selam döndüren hello_world fonksiyonunu ortaya çıkarır. 
 Fonksiyon, "Merhaba, Dünya!" mesajını göstermek için bir ana-minor dil kodunu kullanarak belirli bir dil seçen bir parametreyi kabul eder. 
 2_5/ dosyası, belgelendirme yorumlarıyla fonksiyonu göstermektedir.
+
+Bu kod, verilen dil koduna (`language`), karşılık gelen bir "hello world" metnini döndüren bir işlev tanımlar.
+İşlev, `hello_world` olarak adlandırılmıştır ve bir dil kodu alır (`&str` türünde) ve buna göre uygun bir metin döndürür (`&'static str` türünde).
+
+İşlevin içeriği şu adımları izler:
+
+1. `match` ifadesi, `language` değişkeninin değerine göre karşılaştırma yapar.
+2. Her dil kodu için bir durum (case) belirtilir.
+3. İfade, dil koduna (`language`) bağlı olarak farklı bir metin döndürür.
+4. Eğer belirtilen dil kodu (`language`) desteklenmiyorsa, varsayılan olarak "Hello, world!" metni döndürülür.
+
+//! <b>Hello kütüphane paketi</b>
+//! <p>Yazar: Donis Marshall</p>
+//! <p>Apache 2.0 Lisansı</p>
+
+Belgelendirme yorumları, genellikle mevcut kasanın yerine geçen üst öğeye uygulanan yorumlardır.
+Aşağıda, işaretleme dahil olmak üzere hello kütüphane paketi için belgelendirme örneği bulunmaktadır:
+
+Belgelere örnek kod eklemek de mümkündür. Bu, uygulama kullanıcılarına çok d
+eğerli bir rehberlik sağlayabilir. 
+Belgelerdeki örnek kodlar ayrıca birim testleri olarak da çalıştırılabilir.
+Örnek kodu Belgeler bölümüne yerleştirin.
+Bölümler /// # karakterleri ile belirtilir. /// ve # arasında bir boşluk olduğuna dikkat edin. 
+Kod parçacığını üç ters tırnak (///```) ile baştan ve sondan çerçeveleyin. 2_6/ örnek kodu göstermektedir.
