@@ -286,3 +286,17 @@ Belgelendirme yorumları ve normal yorumlar, genellikle kodun farklı yönlerini
 
 Genel olarak, belgelendirme yorumları daha yapılandırılmış ve belirli bir belgeleme amacı için kullanılırken,
 normal yorumlar genellikle kodun anlaşılmasını ve bakımını kolaylaştırmak için kullanılır.
+
+# Main Fonksiyon
+
+Ana fonksiyon, yürütülebilir crates'in giriş noktasıdır.
+Yürütme bu fonksiyonda başlar. Ana fonksiyonun prototipi parametre almaz ve birim veya Termination özniteliğini döndürür. 
+Rust'ta, birim boş bir demet olan () olarak kabul edilir. Bu, varsayılan dönüş değeridir. 
+Ana fonksiyondan, Termination özniteliğini kullanarak bir tamsayı değeriyle işletim sistemine dönüş yapabilirsiniz.
+Özniteliğin varsayılan uygulaması libc::EXIT_SUCCESS veya libc::EXIT_FAILURE olarak bir çıkış kodu döndürür.
+Bu değerler muhtemelen 1 ve 0'dır, ancak bu uygulamaya bağlıdır.
+
+Ana fonksiyondan dönüş yapmak yerine, bir uygulamayı erken sonlandırmak için çıkış işlevini (std::process::exit) çağırabilirsiniz. 
+Ancak, çıkış işlevi, mevcut çağrı yığınındaki işlevler için temizlik yapmadan uygulamayı derhal sonlandırır ve düzenli bir kapatmayı engelleyebilir. 
+Çıkış işlevinin parametresi, işlem dönüş değerini işletim sistemi için ayarlar.
+
