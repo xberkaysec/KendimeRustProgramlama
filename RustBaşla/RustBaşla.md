@@ -227,3 +227,18 @@ Dosya içinde her bir birim testi #test açıklaması ile etiketlenir.
 Örnek bir birim testi basit bir toplama işlemi gerçekleştirir. İşlem sonucu, asserteq! makrosu içinde beklenen değerle karşılaştırılır. 
 Kodu birim testlerde, kütüphanenizin belirli genel fonksiyonlarına referans vermek için güncellemelisiniz. 
 Kütüphanedeki her genel fonksiyon için bir birim test olmalıdır.
+
+# Yorumlar
+
+Bu bölümdeki kaynak kodlarına şimdiye kadar yorum eklenmemiştir. 
+Yorumlar, yazarı belirleme, lisans bilgilerini vurgulama, işlevleri belgeleme, karmaşık algoritmaları açıklama veya 
+sadece önemli bağlam sağlama gibi çeşitli nedenlerle kaynak kodlarında yer alır.
+
+Rust, C tarzı yorumları destekler.
+// karakterleri bir yorumu başlatır ve satırın sonuna kadar devam ettirir. 
+Çok satırlı yorumları / ve / karakterleri arasında çerçeveleyebilirsiniz.
+
+2_4 numaralı Listede, “Merhaba, Dünya” kaynak koduna yazarı, 
+kaynak dosyasını ve uygulamanın amacını tanımlayan yorumlar eklenmiştir. 
+Hem çok satırlı hem de tek satırlı yorumlar gösterilmiştir.
+
