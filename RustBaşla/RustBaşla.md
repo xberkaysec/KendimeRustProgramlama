@@ -300,3 +300,32 @@ Ana fonksiyondan dönüş yapmak yerine, bir uygulamayı erken sonlandırmak iç
 Ancak, çıkış işlevi, mevcut çağrı yığınındaki işlevler için temizlik yapmadan uygulamayı derhal sonlandırır ve düzenli bir kapatmayı engelleyebilir. 
 Çıkış işlevinin parametresi, işlem dönüş değerini işletim sistemi için ayarlar.
 
+# Rust ile Komut Satırı Argümanları Kullanımı
+
+Rust dilinde komut satırı argümanları, uygulamanın başlatılmasını, yapılandırılmasını veya 
+akış kontrolünü etkilemek için sıkça kullanılan bir tekniktir. 
+Bu yazıda, Rust programlarında komut satırı argümanlarını nasıl kullanacağımızı ele alacağız.
+
+## Komut Satırı Argümanlarının Temel Kullanımı
+
+Komut satırı argümanları, genellikle kullanıcıdan yönlendirme almak için kullanılır. 
+Komut satırında girilen argümanlar, sıfırdan başlayan bir değerler koleksiyonu oluştururlar. 
+Uygulamanın tam yolu genellikle ilk komut satırı argümanı olarak sağlanır. Örneğin:
+
+```
+myapp arg1 arg2
+```
+
+Bu komut satırında üç argüman bulunmaktadır: `myapp`, `arg1` ve `arg2`. Rust'ta `cargo run` komutuyla çalıştırılan bir programda, 
+ilk argüman olan uygulamanın tam adı zaten dolaylı olarak sağlanmıştır. 
+Bu nedenle, `arg1` ve `arg2` aslında uygulamanın perspektifinden ikinci ve üçüncü komut satırı argümanlarıdır.
+
+## Rust'ta Komut Satırı Argümanlarını Okuma
+
+Rust dilinde, `main` fonksiyonu parametre almaz. 
+Ancak komut satırı argümanları, `std::env::args` işlevi kullanılarak programatik olarak okunur.
+Bu işlev, komut satırı argümanlarının bir yineleyicisini döndürür.
+Ayrıca, `nth` ve `collect` gibi yineleyici işlevleri, komut satırı argümanlarına erişmek için kullanılabilir.
+
+2_7/ dosyasında, komut satırı argümanlarına erişmenin çeşitli yollarını gösterilmekte.
+
