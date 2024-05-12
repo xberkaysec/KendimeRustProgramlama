@@ -1,4 +1,4 @@
-# Rust Variables Giriş
+# Giriş
 
 Rust programlama dilinde, type sistemi mevcut tipleri ve özelliklerini kapsar.
 Elbette, Rust'un type sisteminde genel hedefi olan güvenlik, sağlamlık ve ölçeklenebilirlikle ilgili benzersiz özellikleri vardır.
@@ -42,4 +42,31 @@ Başka bir deyişle, bellek konumları değişkenlere bağlanır. Rust esnek ba�
 
 Bu terminoloji, Rust dilinde değişkenlerin bellek üzerinde nasıl çalıştığını ve türlerin nasıl tanımlandığını anlamak için önemlidir. 
 Bu terimlerin doğru bir şekilde anlaşılması, dilin kullanımını daha verimli ve etkili hale getirebilir.
+
+# Variables
+
+Değişkenler, belirli bir bellek konumunu tanımlayan bir bellek adresine çözülür. 
+Değişken adı, ham bir bellek adresinden daha açıklayıcı ve tutarlıdır. 
+Bu, kod yazarken değil sadece bir uygulamayı bakım yaparken veya hata ayıklarken son derece değerlidir. 
+Kendini belgeleyen kod yazarken, açıklayıcı isimler değişmez değişkenler için esastır.
+Değişken adları için kurallar ve adlandırma kuralları şunlardır:
+
+- Büyük-küçük harfe duyarlıdır.
+- Alphanumeric karakterler ve alt çizgi içerirler.
+- Bir sayı ile başlayamazlar.
+- Adlandırma kuralı "snake case" şeklindedir.
+  
+`let` ifadesi ile statik olmayan bir yerel değişken bildirebilirsiniz. 
+Değişkenin türü, let ifadesi içinde açıkça belirtilir veya tür çıkarımı yoluyla belirlenir. 
+Her iki durumda da, değişken statik olarak tiplendirilir. Değişkeni let ifadesiyle veya daha sonra başlatılabilir.
+Ancak, değişkenler herhangi bir şekilde kullanılmadan önce başlatılmalıdır.
+
+İşte bir 'değişmez' değişken bildirmek için farklı sözdizimleri:
+
+```
+let degisken_adi:tur=deger;
+let degisken_adi=deger;
+let degisken_adi:tur;
+let degisken_adi;
+```
 
