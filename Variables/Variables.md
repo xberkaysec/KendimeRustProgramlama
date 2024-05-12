@@ -27,3 +27,19 @@ Bir muhasebe sistemi, bir blok zinciri veya hatta uzay mekiği gibi şeyleri bil
 
 Rust tür sisteminin bir diğer faydası da geniş bir tür boyutu çeşitliliğidir. 
 Bu, her bitin önemli olduğu uygulamalarda geliştiricilere bellek kullanımını verimli bir şekilde yönetme imkanı sağlar.
+
+# Terminoloji
+
+Bu bölümde sıkça geçen ve ilişkili olan terimler type(tür), variables(değişkenler) ve memory(bellek)'dir. 
+Aslında, bu terimler birkaç kez zaten geçti. Bellek, verilerin bulunduğu yerdir. 
+Değişkenler ise adlandırılmış bellek depolama alanlarıdır ve verilere bellek adreslerini kullanarak referans verme ihtiyacını ortadan kaldırırlar.
+Sembolik isimler çok daha kolay hatırlanır! Belleğin içsel bir formatı yoktur. 
+Bir tür, bir integer veya float gibi bir değerin bellek düzenini tanımlar.
+
+Variable Binding(değişken bağlama), Rust type sisteminde başka bir önemli terimdir. 
+Bir değişken adıyla bellek arasında bir bağ oluşturan `let` ifadesi gibi bir bildirim, bir değişken adı ile bellek konumları arasında bir bağ oluşturur. 
+Başka bir deyişle, bellek konumları değişkenlere bağlanır. Rust esnek bağlama destekler.
+
+Bu terminoloji, Rust dilinde değişkenlerin bellek üzerinde nasıl çalıştığını ve türlerin nasıl tanımlandığını anlamak için önemlidir. 
+Bu terimlerin doğru bir şekilde anlaşılması, dilin kullanımını daha verimli ve etkili hale getirebilir.
+
