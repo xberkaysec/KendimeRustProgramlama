@@ -209,19 +209,17 @@ Integer tiplerinin aksine, float tipleri ya da floats, her zaman işaretlidir.
 
 3_6 Kod Listesi, bir float örneğini göstermektedir.
 
--> Kod Listesi 3_6. Kayan Nokta Örneği.
+-> Kod Listesi 3_6. Float Örneği.
 
-Ne f32 ne de f64 tipi, sabit noktalı sayılar için ideal değildir. Bu özellikle, tam kesinlik önemli olan para birimi değerleri için geçerlidir. Kaybolan dolarlar ve kuruşlar birikmeye başlayabilir! rust_decimal kütüphanesinde bulunan Decimal türü, sabit noktalı kayan nokta sayıları için harika bir türdür. rust_decimal kütüphanesine crates.io deposunda ulaşabilirsiniz. 3.10 Kod Listesi'nde gösterildiği gibi from_str constructor veya dec! macro ile bir Decimal sayısı oluşturabilirsiniz.
+Ne f32 ne de f64 tipi, sabit noktalı sayılar için ideal değildir. 
+Bu özellikle, tam kesinlik önemli olan para birimi değerleri için geçerlidir. 
+Kaybolan dolarlar ve kuruşlar birikmeye başlayabilir! 
+rust_decimal kütüphanesinde bulunan Decimal türü, sabit noktalı float sayıları için harika bir türdür. 
+rust_decimal kütüphanesine crates.io deposunda ulaşabilirsiniz. 
+3_7 Kod Listesi'nde gösterildiği gibi from_str constructor veya dec! macro ile bir Decimal sayısı oluşturabilirsiniz.
 
-Kod Listesi 3.10. Decimal Oluşturma
-use rust_decimal::prelude::*;
-use rust_decimal_macros::dec;
-fn main() {
-    let mut sayı1 = Decimal::from_str("-1.23656").unwrap();
-    let mut sayı2 = dec!(-1.23656); // alternatif
-    // değeri 2 ondalık basamağa yuvarla
-    sayı = sayı1.round_dp(2);
-    println!("{}", sayı);
-}
+-> Kod Listesi 3_7 Decimal Oluşturma
 
-Bu şekilde, kayan nokta tipleriyle hassas sayıların işaret, üssel ve kütük bileşenlerini kullanarak işlemler yapabilir ve para birimi gibi sabit noktalı sayıları temsil etmek için Decimal türünü kullanabilirsiniz. Bu türlerin önemi, programınızın doğruluğunu ve hassasiyetini artırabilir.
+Bu şekilde, float tipleriyle hassas sayıların işaret, üssel bileşenlerini kullanarak işlemler yapabilir 
+ve para birimi gibi sabit noktalı sayıları temsil etmek için Decimal türünü kullanabilirsiniz. 
+Bu türlerin önemi, programınızın doğruluğunu ve hassasiyetini artırabilir.
