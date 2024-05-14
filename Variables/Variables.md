@@ -192,7 +192,6 @@ Ancak, uygun gösterimle tabanı değiştirebilirsiniz:
     println!("{}", 0xA); // 10
     println!("{}", 0xb); // 11
     println!("{}", 0xc); // 12
-}
 ```
 
 Bu gösterimler sayesinde, farklı sayı sistemlerindeki değerleri kolayca temsil edebilirsiniz. 
