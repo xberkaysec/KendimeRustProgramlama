@@ -163,10 +163,13 @@ Bir alt taşma da benzer şekilde, ancak diğer yönde döner, -128'den 127'ye,
 
 -> Kod Listesi 3_4 Bir alt taşma oluşturma
 
-Taşmanın, derleme hedefine bağlı olarak tutarsız sonuçları sorunlara yol açabilir. overflowing_add fonksiyonu, tutarlı sonuçlar sağlayan bir alternatif sunar. Bu fonksiyonla, sonuç derleme hedefine bakılmaksızın aynı olacaktır. overflowing_add fonksiyonu, toplama işlemi yapar ve sonucu ve taşma durumunu içeren bir demet olarak döndürür. Eğer bir taşma olursa, taşma durumu true olarak ayarlanır. 3.7 Kod Listesi, overflowing_add fonksiyonunu kullanmanın bir örneğini sağlar.
+Taşmanın, derleme hedefine bağlı olarak tutarsız sonuçları sorunlara yol açabilir. 
+overflowing_add fonksiyonu, tutarlı sonuçlar sağlayan bir alternatif sunar. 
+Bu fonksiyonla, sonuç derleme hedefine bakılmaksızın aynı olacaktır. 
+overflowing_add fonksiyonu, toplama işlemi yapar ve sonucu ve taşma durumunu içeren bir demet olarak döndürür.
+Eğer bir taşma olursa, taşma durumu true olarak ayarlanır. 3_5 Kod Listesi, overflowing_add fonksiyonunu kullanmanın bir örneğini sağlar.
 
-Kod Listesi 3.7. overflowing_add fonksiyonunu kullanarak taşma kontrolü yapma
-let deger = i8::MAX;
-let sonuc = deger.overflowing_add(1); // (127, true)
+-> Kod Listesi 3_5 overflowing_add fonksiyonunu kullanarak overflow kontrolü yapma.
 
-overflowing_sub fonksiyonu alt taşmaları tespit eder. Ayrıca overflowing_mul, overflowing_div ve overflowing_pow gibi diğer varyasyonlar da mevcuttur, her biri uygun şekilde adlandırılmıştır.
+overflowing_sub fonksiyonu alt taşmaları tespit eder. 
+Ayrıca overflowing_mul, overflowing_div ve overflowing_pow gibi diğer varyasyonlar da mevcuttur, her biri uygun şekilde adlandırılmıştır.
