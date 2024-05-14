@@ -266,3 +266,13 @@ let stars: f64 = f64::INFINITY;
 Rust dilinde sonsuzluk kavramını kullanarak matematiksel işlemleri daha esnek bir şekilde gerçekleştirebilirsiniz.
 Bu özellik, belirli durumları kontrol etmek veya özel durumlar için işlemler yapmak için oldukça kullanışlı olabilir.
 
+# NaN
+
+Not a Number (NaN), sayısal olarak tanımsız veya bilinmeyen bir sonucu temsil eder. 
+Bu bazen INFINITY değerlerini içeren formüllerin sonucu olabilir. 
+Ayrıca, negatif bir sayının karekökü alındığında da NaN elde edilebilir.
+
+-> 3_9 Kod örneği. Bu örnekte, 0.0 sayısının karekökünü alarak NaN durumunu kontrol ediyoruz. 
+Eğer sonuç NaN değilse, karekök değerini ekrana yazdırıyoruz; aksi takdirde geçersiz bir sonuç olduğunu belirten bir mesajı ekrana yazdırıyoruz. 
+
+Rust dilinde NaN kavramını bu şekilde kullanarak sayısal işlemleri daha güvenli bir şekilde gerçekleştirebiliriz.
