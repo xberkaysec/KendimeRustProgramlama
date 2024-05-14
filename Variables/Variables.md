@@ -276,3 +276,46 @@ Ayrıca, negatif bir sayının karekökü alındığında da NaN elde edilebilir
 Eğer sonuç NaN değilse, karekök değerini ekrana yazdırıyoruz; aksi takdirde geçersiz bir sonuç olduğunu belirten bir mesajı ekrana yazdırıyoruz. 
 
 Rust dilinde NaN kavramını bu şekilde kullanarak sayısal işlemleri daha güvenli bir şekilde gerçekleştirebiliriz.
+
+# Sayısal Aralıklar
+
+Rust dilinde tür boyutları diğer bazı dillere göre daha belirgin olduğundan,
+geliştiriciler ihtiyaçlarına daha uygun ve verimli uygulamalar oluşturabilirler.
+Aşağıdaki tablolar, imzalı ve imzasız tamsayı türlerinin minimum ve maksimum sınırlarını göstermektedir.
+
+**Tablo 1: İmzalı Tamsayı Türleri Değer Aralıkları**
+```
+- i8: 8-bit -128 ile 127 arası
+- i16: 16-bit -32768 ile 32767 arası
+- i32: 32-bit -2147483648 ile 2147483647 arası
+- i64: 64-bit -9223372036854775808 ile 9223372036854775807 arası
+- i128: 128-bit -170141183460469231731687303715884105728 ile 170141183460469231731687303715884105727 arası
+- isize: İşaretçi büyüklüğünde, mimariye bağlı
+```
+
+**Tablo 2: İmzasız Tamsayı Türleri Değer Aralıkları**
+```
+- u8: 8-bit 0 ile 255 arası
+- u16: 16-bit 0 ile 65535 arası
+- u32: 32-bit 0 ile 4294967295 arası
+- u64: 64-bit 0 ile 18446744073709551615 arası
+- u128: 128-bit 0 ile 340282366920938463463374607431768211455 arası
+- usize: İşaretçi büyüklüğünde, mimariye bağlı
+```
+
+**Tablo 3: Ondalıklı Sayı Türleri Değer Aralıkları**
+```
+- f32: 32-bit -3.4 × 10^38 ile 3.4 × 10^38 arası (Yaklaşık)
+- f64: 64-bit -1.8 × 10^308 ile 1.8 × 10^308 arası (Yaklaşık)
+```
+
+Çalışma zamanında sınırların kontrolü için, MIN ve MAX, belirli türlerin minimum ve maksimum değerlerini döndüren ilişkilendirilmiş sabitlerdir.
+Aşağıdaki örnek bunu göstermektedir.
+
+```
+println!("{} {}", u32::MIN, u32::MAX);
+println!("{} {}", f32::MIN, f32::MAX);
+```
+
+Bu bilgilerle, Rust dilinde türlerin belirli sınırlarını anlayabilir ve uygulamalarınızı daha etkili bir şekilde tasarlayabilirsiniz.
+
