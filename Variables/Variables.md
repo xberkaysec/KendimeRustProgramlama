@@ -199,3 +199,29 @@ Bu gösterimler sayesinde, farklı sayı sistemlerindeki değerleri kolayca tems
 Bu şekilde, farklı sayı sistemlerindeki değerler arasında dönüşümler yapabilir ve programınızın esnekliğini artırabilirsiniz.
 Her bir taban, belirli bir sistemde sayıları temsil etmek için kullanılır ve doğru gösterim kullanılarak istenilen tabandaki sayıları elde edebilirsiniz.
 
+# Floating Point Tipi
+
+Gerçek sayılar için, Rust'ın IEEE 754 standardına uygun olarak tek ve çift hassasiyetli öncül türleri bulunmaktadır. 
+Her tür bir işaret, üs ve mantissa bileşeninden oluşur. 
+f32 türü, 32 bit genişliğinde olan tek-hassasiyetli sayıları temsil eder. 
+f64 türü ise 64 bit genişliğinde çift-hassasiyetli sayıları temsil eder. Tür çıkarımı için, varsayılan kayan nokta türü f64'tür.
+Integer tiplerinin aksine, float tipleri ya da floats, her zaman işaretlidir.
+
+3_6 Kod Listesi, bir float örneğini göstermektedir.
+
+-> Kod Listesi 3_6. Kayan Nokta Örneği.
+
+Ne f32 ne de f64 tipi, sabit noktalı sayılar için ideal değildir. Bu özellikle, tam kesinlik önemli olan para birimi değerleri için geçerlidir. Kaybolan dolarlar ve kuruşlar birikmeye başlayabilir! rust_decimal kütüphanesinde bulunan Decimal türü, sabit noktalı kayan nokta sayıları için harika bir türdür. rust_decimal kütüphanesine crates.io deposunda ulaşabilirsiniz. 3.10 Kod Listesi'nde gösterildiği gibi from_str constructor veya dec! macro ile bir Decimal sayısı oluşturabilirsiniz.
+
+Kod Listesi 3.10. Decimal Oluşturma
+use rust_decimal::prelude::*;
+use rust_decimal_macros::dec;
+fn main() {
+    let mut sayı1 = Decimal::from_str("-1.23656").unwrap();
+    let mut sayı2 = dec!(-1.23656); // alternatif
+    // değeri 2 ondalık basamağa yuvarla
+    sayı = sayı1.round_dp(2);
+    println!("{}", sayı);
+}
+
+Bu şekilde, kayan nokta tipleriyle hassas sayıların işaret, üssel ve kütük bileşenlerini kullanarak işlemler yapabilir ve para birimi gibi sabit noktalı sayıları temsil etmek için Decimal türünü kullanabilirsiniz. Bu türlerin önemi, programınızın doğruluğunu ve hassasiyetini artırabilir.
