@@ -247,4 +247,22 @@ TUA            2π               6.2831853071795862f64
 
 Bu sabitlerin kullanımı, matematiksel hesaplamalarda ve diğer alanlarda size kolaylık sağlayabilir.
 Görsel programlama ve veri analizi gibi alanlarda özellikle yararlı olabilirler.
+```
+
+# Sonsuzluk
+
+Rust, sonsuzluğu ve negatif sonsuzluğu destekleyen 32 bit ve 64 bit sürümlerini destekler. I
+NFINITY ve NEG_INFINITY, std::f32 veya std::f64 modülünde bulunan const değerleridir. 
+
+İşte iki örnek:
+
+```
+let space: f32 = f32::INFINITY;
+let stars: f64 = f64::INFINITY;
+```
+
+-> 3_8 kod örneği, INFINITY sabitini kullanan bir örneği göstermektedir.
+
+Rust dilinde sonsuzluk kavramını kullanarak matematiksel işlemleri daha esnek bir şekilde gerçekleştirebilirsiniz.
+Bu özellik, belirli durumları kontrol etmek veya özel durumlar için işlemler yapmak için oldukça kullanışlı olabilir.
 
