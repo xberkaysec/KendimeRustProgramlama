@@ -106,3 +106,38 @@ Daha sonraki bölümlerde, diziler ve stringler gibi diğer primitifler ele alı
 
 # Integer Tipi
 
+isize ve usize hariç olmak üzere, tamsayı türleri sabit boyutlu olup, tür adının sonuna eklenen ek bit boyutunu belirtir. 
+Örneğin, i64 işaretli 64 bit tamsayıdır.
+
+Aşağıdaki işaretli tamsayı türleri bulunmaktadır:
+- isize
+- i8
+- i16
+- i32
+- i64
+- i128
+
+Bu da işaretsiz tamsayı türleridir:
+- usize
+- u8
+- u16
+- u32
+- u64
+- u128
+
+isize ve usize türlerinin boyutu, çalışma ortamına bağlıdır. Bu, bir işaretçinin boyutudur. 
+Merak ediyorsanız, bir türün boyutunu size_of metodu işlevi ile doğrulayabilirsiniz. 
+Bu metod, std::mem modülünde bulunmaktadır.
+-> Kod Örneği 3_1. isize boyutunu doğrulama kodu.
+
+Önerildiği durumlarda, işaretli tamsayı türünün varsayılan tipi i32'dir. 
+İşaretsiz tamsayılar için ise varsayılan tip u32'dir. 
+Öntanımlı bir tamsayı değerinin varsayılan türünü gösteren Kod Örneği 3_2. 
+Bu kod, genel kavramlar, Insight(içgörü) ve any türünü içerir. 
+
+Daha iyi okunabilirlik için, sayısal literallerde ve ondalık sayılar arasında alt çizgiler kullanılabilir. Genellikle alt çizgiler, 103'lük segmentleri belirtir. Ancak, Rust alt çizgi polisi değildir. Alt çizgiyi sayının herhangi bir yerine koyabilirsiniz, Kod Örneği 3.4'te gösterildiği gibi.
+Kod Örneği 3.4. Sayılarda ayırıcı olarak alt çizgiler eklemek
+
+let normal1 = 123_456_678;
+let normal2 = 123_456.67;
+let ilginç = 12_3_456;
