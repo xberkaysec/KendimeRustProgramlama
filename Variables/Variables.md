@@ -128,7 +128,7 @@ Bu da işaretsiz tamsayı türleridir:
 isize ve usize türlerinin boyutu, çalışma ortamına bağlıdır. Bu, bir işaretçinin boyutudur. 
 Merak ediyorsanız, bir türün boyutunu size_of metodu işlevi ile doğrulayabilirsiniz. 
 Bu metod, std::mem modülünde bulunmaktadır.
--> Kod Örneği 3_1. isize boyutunu doğrulama kodu.
+-> Kod Örneği 3_1. usize boyutunu doğrulama kodu.
 
 Önerildiği durumlarda, işaretli tamsayı türünün varsayılan tipi i32'dir. 
 İşaretsiz tamsayılar için ise varsayılan tip u32'dir. 
