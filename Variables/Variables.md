@@ -319,3 +319,32 @@ println!("{} {}", f32::MIN, f32::MAX);
 
 Bu bilgilerle, Rust dilinde türlerin belirli sınırlarını anlayabilir ve uygulamalarınızı daha etkili bir şekilde tasarlayabilirsiniz.
 
+# Tür Dönüşümleri
+
+Bir değeri, değişkeni veya sabiti mevcut türünden başka bir türe dönüştürebilirsiniz. 
+Rust, örtük tür dönüşümleri için geniş destek sağlamaz. 
+Birçok dil, hassasiyet kaybı olmadığında örtük dönüşümlere izin verir. 
+Ancak Rust, bu durumda bile açık dönüşüm gerektirir. 
+
+Türler Arasında Dönüşüm,
+
+```
+let degisken1 = 1i8;
+let degisken2: f32 = 123.45;
+let degisken3 = degisken2 as f64;
+let degisken4 = 1.23 as u8 as char;
+```
+
+Önceki kod, izin verilen bir çift dönüşüm içerir. Örnekte bir float değerini doğrudan bir karakter değerine dönüştüremediğiniz için, 
+float değeri önce işaretsiz bir tamsayıya dönüştürülür. Ardından işaretsiz tamsayı bir karaktere dönüştürülür.
+
+float değerinden tam sayıya dönüşüm yaparken float sayısının ondalık kısmı kesilir.
+
+Sayısal sabitler, tür son ekleriyle açıkça dönüştürülebilir.
+Belirtim şu şekildedir: degerTipi, burada deger bir sayısal sabit ve Tip, i32, u32, f64 gibi tam tür adıdır, aşağıda gösterildiği gibi.
+Diğer dillerde yaygın olan tek harfli son eklerin Rust'ta desteklenmediğini unutmayın. Rust'taki yaklaşım daha açıklayıcıdır.
+
+```
+let deger1 = 10i8;
+let deger2 = 20f64;
+```
