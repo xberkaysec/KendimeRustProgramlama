@@ -223,3 +223,28 @@ rust_decimal kütüphanesine crates.io deposunda ulaşabilirsiniz.
 Bu şekilde, float tipleriyle hassas sayıların işaret, üssel bileşenlerini kullanarak işlemler yapabilir 
 ve para birimi gibi sabit noktalı sayıları temsil etmek için Decimal türünü kullanabilirsiniz. 
 Bu türlerin önemi, programınızın doğruluğunu ve hassasiyetini artırabilir.
+
+# Floating Point Sabitleri
+
+Kullanımınız için bilinen floating point sabitleri mevcuttur.
+Bu sabitler, `std::f64::consts` modülünde f64 veri türü olarak uygulanmıştır. 
+Aşağıdaki tablo, bazı f64 sabitlerinin bir listesidir.
+
+Tablo: Bazı f64 Sabitlerinin Listesi
+
+```
+Ad             Açıklama         Değer
+E              Euler sayısı     2.7182818284590451f64
+FRAC_1_PI      1/π              0.31830988618379069f64
+FRAC_1_SQRT_2  1/sqrt(2)        0.70710678118654757f64
+FRAC_2_PI      2/π              0.70710678118654757f64
+FRAC_2_SQRT_2  2/sqrt(2)        1.1283791670955126f64
+LN_10          ln(10)           2.3025850929940459f64
+LOG10_2        Log10(2)         0.3010299956639812f64
+PI             ∏                3.1415926535897931f64
+SQRT_2         sqrt(2)          1.4142135623730951f64
+TUA            2π               6.2831853071795862f64
+
+Bu sabitlerin kullanımı, matematiksel hesaplamalarda ve diğer alanlarda size kolaylık sağlayabilir.
+Görsel programlama ve veri analizi gibi alanlarda özellikle yararlı olabilirler.
+
