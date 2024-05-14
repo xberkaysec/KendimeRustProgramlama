@@ -173,3 +173,27 @@ Eğer bir taşma olursa, taşma durumu true olarak ayarlanır. 3_5 Kod Listesi, 
 
 overflowing_sub fonksiyonu alt taşmaları tespit eder. 
 Ayrıca overflowing_mul, overflowing_div ve overflowing_pow gibi diğer varyasyonlar da mevcuttur, her biri uygun şekilde adlandırılmıştır.
+
+# Notasyonlar
+
+Ondalık taban, tamsayı değerler için varsayılan tabandır. 
+Ancak, uygun gösterimle tabanı değiştirebilirsiniz:
+
+- İkili için 0b kullanın.
+- Sekizli için 0o kullanın.
+- Onaltılı için 0x kullanın.
+
+Çeşitli taban gösterimleri:
+
+```
+println!("{}", 10); // 10
+println!("{:04b}", 0b10); // 0010
+println!("{}", 0o12); // 10
+println!("{}", 0xA); // 10
+```
+
+Bu gösterimler sayesinde, farklı sayı sistemlerindeki değerleri kolayca temsil edebilirsiniz. 
+Örneğin, 0b10 ikili sistemde 2'yi, 0o12 sekizli sistemde 10'u, 0xA ise onaltılı sistemde 10'u temsil eder. 
+Bu şekilde, farklı sayı sistemlerindeki değerler arasında dönüşümler yapabilir ve programınızın esnekliğini artırabilirsiniz.
+Her bir taban, belirli bir sistemde sayıları temsil etmek için kullanılır ve doğru gösterim kullanılarak istenilen tabandaki sayıları elde edebilirsiniz.
+
