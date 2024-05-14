@@ -135,9 +135,12 @@ Bu metod, std::mem modülünde bulunmaktadır.
 Öntanımlı bir tamsayı değerinin varsayılan türünü gösteren Kod Örneği 3_2. 
 Bu kod, genel kavramlar, Insight(içgörü) ve any türünü içerir. 
 
-Daha iyi okunabilirlik için, sayısal literallerde ve ondalık sayılar arasında alt çizgiler kullanılabilir. Genellikle alt çizgiler, 103'lük segmentleri belirtir. Ancak, Rust alt çizgi polisi değildir. Alt çizgiyi sayının herhangi bir yerine koyabilirsiniz, Kod Örneği 3.4'te gösterildiği gibi.
-Kod Örneği 3.4. Sayılarda ayırıcı olarak alt çizgiler eklemek
+Daha iyi okunabilirlik için, sayısal literallerde ve ondalık sayılar arasında alt çizgiler kullanılabilir. 
+Genellikle alt çizgiler, 103'lük segmentleri belirtir. Ancak, Rust alt çizgi polisi değildir. 
+Alt çizgiyi sayının herhangi bir yerine koyabilirsiniz.
 
+```
 let normal1 = 123_456_678;
 let normal2 = 123_456.67;
 let ilginç = 12_3_456;
+```
