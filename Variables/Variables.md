@@ -104,3 +104,5 @@ Diğer primitif tipler şunları içerir:
 Bu bölümde, skaler primitif tipleri gözden geçireceğiz.
 Daha sonraki bölümlerde, diziler ve stringler gibi diğer primitifler ele alınacaktır.
 
+# Integer Tipi
+
