@@ -348,3 +348,18 @@ Diğer dillerde yaygın olan tek harfli son eklerin Rust'ta desteklenmediğini u
 let deger1 = 10i8;
 let deger2 = 20f64;
 ```
+
+Ayrıca bakınız,
+
+```rust
+fn print_type_of<T>(_: &T) {
+    println!("{}", std::any::type_name::<T>()) 
+}
+
+fn main() {
+    let deger = -3213213f64;
+
+    print_type_of(&deger);
+
+}
+```
