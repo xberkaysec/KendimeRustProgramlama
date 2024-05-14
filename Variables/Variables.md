@@ -142,5 +142,5 @@ Alt çizgiyi sayının herhangi bir yerine koyabilirsiniz.
 ```
 let normal1 = 123_456_678;
 let normal2 = 123_456.67;
-let ilginç = 12_3_456;
+let ilginc = 12_3_456;
 ```
