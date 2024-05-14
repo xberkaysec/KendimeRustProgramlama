@@ -70,3 +70,37 @@ let degisken_adi:tur;
 let degisken_adi;
 ```
 
+# Primitives
+
+Rust'un temel tipleri ve yapı taşları olan "primitives"ler, daha karmaşık tipleri oluşturmak için bir araya getirilebilir. 
+Bu temel tipler, Rust derleyicisi tarafından özgün olarak uygulanmıştır. 
+Primitiflerin işlevleri ve öznitelikleri, genellikle Rust kütüphanelerinde uygulanmıştır.
+Örneğin, i32::MAX, i32 primitifine uygulanmış bir ilişkili sabittir.
+
+Skaler primitifler, tek bir değeri temsil eden ve bellekte sabit bir boyutta saklanabilen temel veri tipleridir. 
+Bunlar, genellikle bir boyut ve basit bir veri yapısına sahiptir.
+Rust'un hem skaler hem de skaler olmayan primitifleri vardır. Skaler primitifler şunları içerir:
+
+- İşaretli tamsayılar
+- İşaretsiz tamsayılar
+- Ondalık sayılar (float)
+- Mantıksal değerler (bool)
+- Referanslar
+
+Skaler olmayan primitifler, tek bir değerden daha karmaşık veri yapılarına sahip olan temel veri tipleridir. 
+Bunlar, koleksiyonlar ve daha karmaşık veri yapılarını temsil eder. 
+Skaler olmayan primitifler şunları içerir:
+- Dizi (array)
+- Demet (tuple)
+- Dilim (slice)
+- String
+- str
+
+Diğer primitif tipler şunları içerir:
+- (): ünite tipi (unit type)
+- fn: işaretçi fonksiyon tipleri (function pointer types)
+- Ham işaretçi (raw pointer)
+
+Bu bölümde, skaler primitif tipleri gözden geçireceğiz.
+Daha sonraki bölümlerde, diziler ve stringler gibi diğer primitifler ele alınacaktır.
+
