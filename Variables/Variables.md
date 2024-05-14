@@ -144,3 +144,29 @@ let normal1 = 123_456_678;
 let normal2 = 123_456.67;
 let ilginc = 12_3_456;
 ```
+
+# Overflow
+
+Overflow taşması veya alt taşması, bir tamsayı türünün minimum veya maksimum değerinin aşılması durumunda meydana gelir. 
+Genel olarak, her ikisi de overflow olarak kabul edilir.
+Taşma meydana geldiğinde, sonuç debug veya release derlemesi olmasına bağlıdır. 
+Eğer bir debug derlemesi ise, taşma olduğunda bir panik oluşacaktır. 
+Panikler, işlenmemiş bir uygulamayı durdurabilen istisnai olaylardır. 
+Ancak, bir taşma release derlemesinde meydana geldiğinde panik oluşmaz. 
+Taşma, sayıyı maksimum değerden minimuma ya da tam tersine kaydırır.
+3_3 Kod Listesi'nde gösterildiği gibi, sayı, maksimum i8 değeri 127'den minimum i8 değeri -128'e taşma olduğunda döner.
+
+-> Kod Listesi 3_3 Bir overflow oluşturma.
+
+Bir alt taşma da benzer şekilde, ancak diğer yönde döner, -128'den 127'ye, 
+3_4 Kod Listesi'nde gösterildiği gibi.
+
+-> Kod Listesi 3_4 Bir alt taşma oluşturma
+
+Taşmanın, derleme hedefine bağlı olarak tutarsız sonuçları sorunlara yol açabilir. overflowing_add fonksiyonu, tutarlı sonuçlar sağlayan bir alternatif sunar. Bu fonksiyonla, sonuç derleme hedefine bakılmaksızın aynı olacaktır. overflowing_add fonksiyonu, toplama işlemi yapar ve sonucu ve taşma durumunu içeren bir demet olarak döndürür. Eğer bir taşma olursa, taşma durumu true olarak ayarlanır. 3.7 Kod Listesi, overflowing_add fonksiyonunu kullanmanın bir örneğini sağlar.
+
+Kod Listesi 3.7. overflowing_add fonksiyonunu kullanarak taşma kontrolü yapma
+let deger = i8::MAX;
+let sonuc = deger.overflowing_add(1); // (127, true)
+
+overflowing_sub fonksiyonu alt taşmaları tespit eder. Ayrıca overflowing_mul, overflowing_div ve overflowing_pow gibi diğer varyasyonlar da mevcuttur, her biri uygun şekilde adlandırılmıştır.
