@@ -186,10 +186,13 @@ Ancak, uygun gösterimle tabanı değiştirebilirsiniz:
 Çeşitli taban gösterimleri:
 
 ```
-println!("{}", 10); // 10
-println!("{:04b}", 0b10); // 0010
-println!("{}", 0o12); // 10
-println!("{}", 0xA); // 10
+    println!("{}", 10); // 10
+    println!("{:04b}", 0b10); // 0010
+    println!("{}", 0o12); // 10
+    println!("{}", 0xA); // 10
+    println!("{}", 0xb); // 11
+    println!("{}", 0xc); // 12
+}
 ```
 
 Bu gösterimler sayesinde, farklı sayı sistemlerindeki değerleri kolayca temsil edebilirsiniz. 
