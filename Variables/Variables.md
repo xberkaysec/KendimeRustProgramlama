@@ -421,3 +421,39 @@ Kaçış                Türü                         Açıklama
 \"                   Alıntı                       Çift tırnak
 ```
 
+# Pointers(İşaretçiler)
+
+Rust'ın iki tür işaretçisi vardır: referanslar ve raw işaretçiler.
+Referanslar güvenli işaretçilerdir. Diğer yandan, raw işaretçiler basitçe bellekte bir değeri işaret eder.
+İşaretçinin artık kullanılamadığı durumda belleği serbest bırakma gibi varsayılan davranış yoktur. 
+Bu, C tarzı işaretçilere benzer.
+
+Bir raw işaretçinin değeri bir bellek adresidir. Bu, yığın, bellek veya statik bellek konumundaki bir değeri gösteren bir bellek adresi olabilir. 
+Raw işaretçiler kendileri bellekte bazı yerlerde bulunur ve genellikle yığında bulunur. 
+Ancak her zaman değil - örneğin, bir node of a link listesin de depolanan bir raw işaretçi yığında olmayabilir.
+Raw işaretçinin boyutu (yani, bellek adresi), ana sistem mimarisine bağlıdır.
+
+Raw işaretçilerin, referansların ve düzenli değerlerin farklı türler olduğunu kabul etmek önemlidir. 
+Bu ince ama önemli bir ayrımdır. Örneğin, i32 ve &i32 farklı türlerdir.
+i32 türü, 32 bitlik bir tamsayı değerine işaret eder.
+Bununla birlikte, &i32, bir i32 değerine güvenli bir işaretçiye işaret eden bir referanstır. 
+Ayrıca, &i32, bir *i32 türünden farklıdır, bu da bir raw işaretçi türüdür.
+İstenirse, her zaman bir referansı benzer bir türdeki bir raw işaretçiye dönüştürebilirsiniz.
+
+“pa” ve “pb”, a ve b değerlerine raw işaretçilerdir:
+
+```rust
+let a: i32 = 10;
+// 10
+let b: i32 = 20;
+// 20
+
+let pa = &a as *const i32;
+// 0x36d52ff4d0
+let pb = &b as *const i32;
+// 0x36d52ff4d4
+```
+
+İşaretçiler, Rust dilinde birinci sınıf vatandaşlardır ve diğer tüm türlerle aynı yeteneklere sahiptir.
+İşaretçiler, değişkenler gibi kullanılabilir, yapı alanları, fonksiyon parametreleri veya dönüş değerleri olabilir.
+
