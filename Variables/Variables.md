@@ -363,3 +363,19 @@ fn main() {
 
 }
 ```
+# Boolean Türleri
+
+Rust'ta Boolean türü bool'dur ve mantıksal değerleri temsil eder. 
+Bir bool türü için kabul edilebilir değerler true ve false'dur.
+
+```rust
+let kosul: bool = true;
+```
+
+Dahili olarak, bool değerleri mantıksal değerleri 0x01'e (true) ve 0x00'a (false) dönüştürülür.
+Bool değerlerini i8 türlerine dönüştürebilirsiniz.
+True, 1 olurken, false 0 olur.
+
+Bool değerleri genellikle if anahtar kelimesi içinde kullanılır.
+3_10'da örnek var.
+
