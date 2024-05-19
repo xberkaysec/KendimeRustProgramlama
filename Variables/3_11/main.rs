@@ -9,6 +9,7 @@ fn main() {
     let b: i32 = 20;
     // 20
     let c: i32 = 30;
+    // 30
 
     let pa = &a as *const i32;
     // 0x36d52ff4d0
