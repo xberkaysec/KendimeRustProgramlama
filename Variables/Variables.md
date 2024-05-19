@@ -379,3 +379,45 @@ True, 1 olurken, false 0 olur.
 Bool değerleri genellikle if anahtar kelimesi içinde kullanılır.
 3_10'da örnek var.
 
+# Char Türü
+
+Char türü, tekil karakterler için kullanılır. 
+Bu, bir Unicode karakteridir, UTF-8 kodlamasıyla Unicode Skaler Değeri (USV) şeklindedir. 
+Ayrıca, char değerleri 4 bayt boyutundadır ve Unicode tablosundaki bir kod noktasını temsil eder.
+Bu, alfasayısal karakterleri, kaçış karakterlerini, sembolleri ve hatta emojileri içerir.
+Evet, Unicode artık gülücük yüzlerine de sahip! 
+Unicode, dünya çapındaki çeşitli yazı sistemlerindeki her karakter için bir kod noktasına sahip olup, uluslararasılaştırmayı destekler.
+ASCII, Unicode tablosunun başında yer alır.
+
+Tek tırnaklar içinde bir literel char değeri nasıl tanımlayacağınızı gösterir,
+
+```rust
+let degisken1 = 'a';
+let degisken2: char = 'b';
+```
+
+Doğru bir Unicode değeri varsayarak, bir tamsayı ile char türü arasında dönüşüm yapabilirsiniz,
+aşağıdaki gibi gösterildiği gibi.
+
+```rust
+let degisken1 = 65 as char; // 'A'
+let degisken2 = 'A' as i32; // 65
+```
+
+Unicode, çeşitli kaçış karakterlerini destekler. Bunlar genellikle gizli karakterlerdir, örneğin bir yeni satır veya sekme karakteri.
+Aşağıdaki Tablo, her bir kaçış karakterini sunmaktadır.
+
+```
+Kaçış                Türü                         Açıklama
+\n                   ASCII                        Yeni satır
+\r                   ASCII                        Taşıma işareti
+\t                   ASCII                        Sekme
+\0                   ASCII                        Null
+\\                   ASCII                        Ters Eğik Çizgi
+\x{nn}               ASCII                        7-bit karakter kodu
+\x{nn}               ASCII                        8-bit karakter kodu
+\u{nnnnnn}           Unicode                      24-bit Unicode karakter
+\'                   Alıntı                       Tek tırnak
+\"                   Alıntı                       Çift tırnak
+```
+
