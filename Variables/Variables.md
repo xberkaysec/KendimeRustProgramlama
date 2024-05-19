@@ -449,9 +449,9 @@ let b: i32 = 20;
 // 20
 
 let pa = &a as *const i32;
-// 0x36d52ff4d0
+// 0x7fff149df274
 let pb = &b as *const i32;
-// 0x36d52ff4d4
+// 0x7fff149df278
 ```
 
 İşaretçiler, Rust dilinde birinci sınıf vatandaşlardır ve diğer tüm türlerle aynı yeteneklere sahiptir.
