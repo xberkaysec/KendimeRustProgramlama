@@ -538,3 +538,69 @@ fn main() {
     println!("Bütün referansların karşılaştırma sonucu: {}", are_equal);
 }
 ```
+
+# Operators(Operatörler)
+
+Operatörler
+
+Skaler tiplerin temel davranışlarını tanımlayan standart operatörler vardır:
+
+```
+Matematiksel operatörler
+Boolean operatörler
+Mantıksal operatörler
+Bitwise operatörler
+```
+
+Aşağı da gösterilen matematiksel operatörler genellikle toplama ve çıkarma gibi çeşitli sayısal hesaplamaları yapan ikili işlemlerdir.
+
+Matematiksel Operatörler
+
+```
+Adı       Operatör     Örnek       Sonuç
+Toplama    +           a + b       100
+Çıkarma    -           a - b       10
+Çarpma     *           a * b       1000
+Bölme      /           a / b       4
+Modulus    %           a % b       5
+Negasyon   -           -a          -25
+```
+
+Binary operasyonlar left value ve right value, olmak üzere iki tarafı temsil eder. 
+Genellikle sol değer ve sağ değer olarak adlandırılırlar. 
+Bir değeri atamak üzere sol değeri değişken olarak kullandığınızda bileşik bir operatörü kullanabilirsiniz. 
+Bu iki işlemin davranışı aynıdır.
+
+```
+value = value + 5; // + operatörü
+
+value += 5; // bileşik + operatörü
+```
+
+Aşağıda ki tablo bileşik matematiksel operatörlerin bir listesidir.
+
+Bileşik Matematiksel Operatörler
+
+```
+Adı           Operatör   Örnek     Sonuç
+Toplama        +         a += b    a=100
+Çıkarma        -         a -= b    a=50
+Çarpma         *         a *= b    a=1000
+Bölme          /         a =/ b    a=2
+Modulus        %         a %= b    5
+```
+
+Boolean operatörler genellikle ikili işlemlerdir ve true veya false değerleri döndürür. 
+Operasyonun başarısı, karşılaştırılan değerlerin türlerine bağlı olarak karşılaştırılabilir olup olmadığına bağlıdır.
+
+Aşağı da tablo Boolean operatörlerin bir listesini sağlar.
+
+Boolean Operatörler
+
+```
+Adı                         Operatör     Örnek     Sonuç
+Eşit                        ==           a == b    False
+Daha Küçük                  <            a < b     False
+Daha Büyük                  >            a > b     True
+Küçük veya Eşit             <=           a <= b    False
+...
