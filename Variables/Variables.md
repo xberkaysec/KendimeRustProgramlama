@@ -522,16 +522,16 @@ fn main() {
     let dolar = 30;
     let euro = 30;
     let ruble = 30;
-    let sterlen = 30;
+    let sterlin = 30;
 
     
     let dolar = &dolar;
     let euro = &euro;
     let ruble = &ruble;
-    let sterlen = &sterlen;
+    let sterlin = &sterlen;
 
 
-    let references = [dolar as *const i32, euro as *const i32, ruble as *const i32, sterlen as *const i32];
+    let references = [dolar as *const i32, euro as *const i32, ruble as *const i32, sterlin as *const i32];
     
     let are_equal = references.iter().all(|&x| x == references[0]);
     
