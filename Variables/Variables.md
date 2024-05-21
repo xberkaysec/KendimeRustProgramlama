@@ -457,3 +457,63 @@ let pb = &b as *const i32;
 İşaretçiler, Rust dilinde birinci sınıf vatandaşlardır ve diğer tüm türlerle aynı yeteneklere sahiptir.
 İşaretçiler, değişkenler gibi kullanılabilir, yapı alanları, fonksiyon parametreleri veya dönüş değerleri olabilir.
 
+# References(Referanslar)
+
+Referanslar güvenli işaretçilerdir. Referanslar için belirli kurallar geçerlidir, fakat raw işaretçiler için geçerli değildir, bu kurallar güvenliği sağlamak için uygulanmıştır.
+Referanslar, refere edilen bellek konumundaki değeri ödünç alırlar.
+Referanslar hakkında akılda tutulması gereken diğer önemli noktalar şunlardır:
+
+- Referanslar null olamaz.
+- Temel değer geçerli bir tipte olmalıdır.
+- Referansların ömürleri vardır.
+- Referanslarla ilişkili sahiplik gibi davranışlar bulunmaktadır.
+
+Referans türünü, daha önce gösterildiği gibi, bir & ile bildirirsiniz. 
+Ayrıca, bir değeri referans almak için (&) operatörünü kullanabilirsiniz. 
+Bu bağlamda ampersand işaretini "referansını al" olarak yorumlayabilirsiniz.
+
+Dereference operatörü (*) bir referansı dereference eder. 
+Referans yapılan bellek adresindeki değeri alırsınız. 
+Bu, referansın temel değeridir. 
+
+Örneğin, aşağıdaki ayrıştırmanın bir örneğini:
+
+```rust
+let aref: &i32 = &5;
+let value: i32 = *aref;
+```
+
+Matematik operatörleri hem değer hem de referans türleri için uygulanır. 
+Bir referans için matematiksel bir hesaplama yapılmadan önce, değer otomatik olarak dereference edilir.
+
+Referans ve matematik operatörleriyle ilgili örnekler:
+
+```rust
+let ref1 = &15;
+let ref2 = &20;
+let value1 = ref1 + 10;
+let value2 = ref1 * ref2;
+println!("{} {}", value1, value2); // 25 300
+```
+
+Yukarıdaki bildirimleri value1 ve value2 için farklı şekilde yeniden yazabilirsiniz, ancak sonuç aynı olacaktır. 
+Ancak, aşağıdaki kod okunması daha zordur ve gereksiz dereferans yapar. 
+Matematiksel işlemler için otomatik olarak yapılacaktır.
+
+```rust
+let value1 = *ref1 + 10;
+let value2 = *ref1 * *ref2;
+```
+
+Referanslar, dereference işlemi ve matematik operatörlerini içeren bir örnek, 3_12'de.
+
+== operatörü, referansta bulunan değerleri karşılaştırır, bellek konumlarını değil. Eğer gerçek bellek adreslerini karşılaştırmak istiyorsanız, std::ptr modülündeki eq fonksiyonunu çağırabilirsiniz.
+
+```rust
+let num_of_eggs = 10;
+let num_of_pizza = 10;
+let eggs = &num_of_eggs;
+let pizza = &num_of_pizza;
+eggs == pizza; // true
+ptr::eq(eggs, pizza); // false
+```
