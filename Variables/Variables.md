@@ -24,6 +24,13 @@ Bu, kodun daha okunabilir olmasını ve aynı zamanda hataları azaltmayı sağl
 Rust, standart türler ve operatörlerin tam bir setini sağlar. 
 Bunun yanı sıra, daha karmaşık problemleri modellemek için özel türler veya toplu türler oluşturabilirsiniz. 
 Bir muhasebe sistemi, bir blok zinciri veya hatta uzay mekiği gibi şeyleri bile modelleyebilirsiniz!
+let mut dolar = 30;
+    let mut euro = 30;
+    
+    let test = dolar + euro;
+
+    println!("sonuc :  {}", test);
+
 
 Rust tür sisteminin bir diğer faydası da geniş bir tür boyutu çeşitliliğidir. 
 Bu, her bitin önemli olduğu uygulamalarda geliştiricilere bellek kullanımını verimli bir şekilde yönetme imkanı sağlar.
@@ -603,4 +610,3 @@ Eşit                        ==           a == b    False
 Daha Küçük                  <            a < b     False
 Daha Büyük                  >            a > b     True
 Küçük veya Eşit             <=           a <= b    False
-...
