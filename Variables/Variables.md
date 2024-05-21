@@ -513,3 +513,28 @@ std::ptr modülündeki eq fonksiyonunu çağırabilirsiniz.
 
 Örnek 3_13'de...
 
+Ayrıca ikiden fazla referans'ı karşılaştırmak için şu şekil de yapabilirsiniz:
+
+```rust
+use std::{env::consts, ptr};
+
+fn main() {
+    let dolar = 30;
+    let euro = 30;
+    let ruble = 30;
+    let sterlen = 30;
+
+    
+    let dolar = &dolar;
+    let euro = &euro;
+    let ruble = &ruble;
+    let sterlen = &sterlen;
+
+
+    let references = [dolar as *const i32, euro as *const i32, ruble as *const i32, sterlen as *const i32];
+    
+    let are_equal = references.iter().all(|&x| x == references[0]);
+    
+    println!("Bütün referansların karşılaştırma sonucu: {}", are_equal);
+}
+```
