@@ -613,3 +613,36 @@ Küçük veya Eşit             <=           a <= b    False
 Büyük veya Eşit             >=           a >= b    True
 Eşit Değil                  !=           a !=      True
 ```
+
+Binary mantıksal operatörler tembel operatörlerdir. 
+Tembel operatörlerde, r değeri genel ifadeyi çözmek için sadece gerekli olduğunda değerlendirilir. 
+Örneğin, && operatörünün r değeri, l değeri doğru olduğunda yalnızca değerlendirilir.
+Eğer && operatörünün l değeri yanlışsa, r değeri değerlendirilmez. 
+Bu duruma kısa devre denir ve istenmeyen yazılım hatalarına neden olabilir. 
+Boolean işlemlerinde, l değerinin gerekli yan etkilere neden olmamasına dikkat edin. 
+Bu yan etki, kısa devre olması durumun da meydana gelmeyebilir. 
+Örneğin, bir fonksiyonu r değeri olarak çağırdığınızda ve programınızın durumunu değiştiğinde bu durum ortaya çıkabilir. 
+Eğer kısa devre varsa, fonksiyon çağrılmaz ve gerekli değişiklik meydana gelmeyebilir.
+
+&& ve || operatörleri için, & ve | operatörleri kısa devre yapmayan eş operatörlerdir.
+
+
+Kod Örnek, Mesajı kısa devre yapmayan bir ifade.
+
+```rust
+true && {println!("kısa devre yapmaz"); false}; // mesajı gösterir
+false && {println!("kısa devre yapar"); false}; // mesajı göstermez
+false & {println!("kısa devre yapmaz"); false}; // mesajı gösterir
+```
+
+Mantıksal(Logical) Operatörler
+
+```
+Açıklama        İşlem  Örnek             Sonuç     Kısa Devre
+Logical And     &&     false && true     True      Yes
+Logical And     &&     true && false     False     No
+Logical Or      ||     true || false     True      Yes
+Logical Or      ||     false || true     False     No
+Logical Not     |      true              N/A       No
+```
+
