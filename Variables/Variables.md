@@ -610,3 +610,6 @@ Eşit                        ==           a == b    False
 Daha Küçük                  <            a < b     False
 Daha Büyük                  >            a > b     True
 Küçük veya Eşit             <=           a <= b    False
+Büyük veya Eşit             >=           a >= b    True
+Eşit Değil                  !=           a !=      True
+```
