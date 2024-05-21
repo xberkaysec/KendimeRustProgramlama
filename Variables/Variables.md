@@ -646,3 +646,30 @@ Logical Or      ||     false || true     False     No
 Logical Not     |      true              N/A       No
 ```
 
+Bit işlem operatörleri doğal olarak bit işlemleri gerçekleştirir. 
+Bit işlemi için girdi değerlerinin tamsayı olması gerekmektedir.
+
+Bitwise Operatörler
+
+```
+İsim                     Operatör        Örnek         Sonuç
+Bitwise Ve               &               a & b          2 veya 0010
+Bitwise Veya             |               a | b          14 veya 9110
+Bitwise Özel Veya        ^               a ^ b          12 veya 1100
+Bitwise Sola Kaydır      <<              a << 1         20 veya 10100
+Bitwise Sağa Kaydır      >>              a >> 1         5 veya 0101
+```
+
+
+Karmaşık operatörler de bit işlemleri için mevcuttur ve Table 3.11'de listelenmiştir.
+
+Karmaşık Operatörler
+
+```
+İsim                 Operatör         Örnek         Sonuç
+Bitwise Ve            &               a &= b        2 veya 0010
+Bitwise Veya          |               a |= b        14 veya 1110
+Bitwise Özel Veya     ^               a ^= b        12 veya 1100
+Bitwise Sola Kaydır   <<=             a <<= 1       20 veya 10100
+Bitwise Sağa Kaydır   >>=             a >>= 1       5 veya 0101
+```
