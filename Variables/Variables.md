@@ -507,13 +507,9 @@ let value2 = *ref1 * *ref2;
 
 Referanslar, dereference işlemi ve matematik operatörlerini içeren bir örnek, 3_12'de.
 
-== operatörü, referansta bulunan değerleri karşılaştırır, bellek konumlarını değil. Eğer gerçek bellek adreslerini karşılaştırmak istiyorsanız, std::ptr modülündeki eq fonksiyonunu çağırabilirsiniz.
+`==` operatörü, referansta bulunan değerleri karşılaştırır, bellek konumlarını değil. 
+Eğer gerçek bellek adreslerini karşılaştırmak istiyorsanız, 
+std::ptr modülündeki eq fonksiyonunu çağırabilirsiniz.
 
-```rust
-let num_of_eggs = 10;
-let num_of_pizza = 10;
-let eggs = &num_of_eggs;
-let pizza = &num_of_pizza;
-eggs == pizza; // true
-ptr::eq(eggs, pizza); // false
-```
+Örnek 3_13'de...
+
