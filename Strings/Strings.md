@@ -35,20 +35,18 @@ Yeni String tiplerini oluşturmanın çeşitli yaklaşımları vardır.
 Çoğu zaman, String tipleri bir dize literal (yani str) kullanılarak başlatılır. 
 String::from ve str::to_string gibi işlevler, bir str'yi String'e dönüştürür.
 
-4.2/ de, from ve to_string işlevlerini kullanarak bir String literalinden iki String oluşturuyoruz.
+4_2/ de, from ve to_string işlevlerini kullanarak bir String literalinden iki String oluşturuyoruz.
 
 New yapıcısını kullanarak String için boş bir dize oluşturabilirsiniz.
 Genellikle, bu daha sonra metin eklenebilen değiştirilebilir bir String'dir.
 
-Liste 4.3'te, değiştirilebilir boş bir String oluşturup ardından "Arizona" dizesini ekliyoruz.
+4_3 te, değiştirilebilir boş bir String oluşturup ardından "Dark" dizesini ekliyoruz.
 
-Kod Listesi 4.3. Bir String'e Ekleme
-
-let mut string_1 = String::new();
-string_1.push_str("Arizona");
-
-
-Belirtildiği gibi, String'ler özel bir vektördür - bir karakter koleksiyonudur. Bir String'i doğrudan bir vektorden bile oluşturabilirsiniz. Önce, tamsayılar olarak Unicode kod noktalarından oluşan bir vektör oluşturun. Her kod noktası tek bir karakteri temsil eder. Bir sonraki adım, vektörü from_utf8 işleviyle bir dizeye dönüştürmektir.
+Belirtildiği gibi, String'ler özel bir vektördür - bir karakter koleksiyonudur. 
+Bir String'i doğrudan bir vektorden bile oluşturabilirsiniz. 
+Önce, tamsayılar olarak Unicode kod noktalarından oluşan bir vektör oluşturun. H
+er kod noktası tek bir karakteri temsil eder. 
+Bir sonraki adım, vektörü from_utf8 işleviyle bir dizeye dönüştürmektir.
 
 Liste 4.4, Unicode karakterlerinden bir String oluşturmaya bir örnektir.
 
