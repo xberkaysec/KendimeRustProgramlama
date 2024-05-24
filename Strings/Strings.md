@@ -12,3 +12,13 @@ Birçok uygulamadaki Stringslerin yaygınlığı nedeniyle, Rust güvenli String
 
 Rust'taki temel String türleri String ve str (stir olarak telaffuz edilir).
 
+# Str
+
+str türü, temel bir türdür ve çekirdek dilin bir parçasıdır. 
+str türü, dilimin unsized ve read-only (yazılabilir olmayan) bir dilim olma özelliğine sahiptir.
+str bir dilim olduğundan, genellikle bir str'yi ödünç alırsınız, &str.
+Bir str, string verisinin işaretçisi ve uzunluğundan oluşan iki alanı içerir.
+String literalleri, tırnaklar içinde tanımlanan ("...") str değerleridir ve programın tamamı boyunca var olur. 
+Bu nedenle, bir string literalinin ömrü statiktir. 
+
+4_1/, bir str türünü bildirme ve kullanma şeklini göstermektedir.
