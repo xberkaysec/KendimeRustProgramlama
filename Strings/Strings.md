@@ -78,3 +78,6 @@ yineleyici üzerindeki count fonksiyonunu çağırarak karakter sayısını elde
 
 Bu örnek, farklı dillerde "Merhaba" kelimesinin hem bayt hem de karakter sayısını ekrana yazdırmaktadır.
 Her dil için farklı bayt ve karakter sayılarına dikkat edilmektedir.
+
+# String Geliştirme
+
