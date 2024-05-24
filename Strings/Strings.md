@@ -44,16 +44,8 @@ Genellikle, bu daha sonra metin eklenebilen değiştirilebilir bir String'dir.
 
 Belirtildiği gibi, String'ler özel bir vektördür - bir karakter koleksiyonudur. 
 Bir String'i doğrudan bir vektorden bile oluşturabilirsiniz. 
-Önce, tamsayılar olarak Unicode kod noktalarından oluşan bir vektör oluşturun. H
-er kod noktası tek bir karakteri temsil eder. 
+Önce, tamsayılar olarak Unicode kod noktalarından oluşan bir vektör oluşturun. 
+Her kod noktası tek bir karakteri temsil eder. 
 Bir sonraki adım, vektörü from_utf8 işleviyle bir dizeye dönüştürmektir.
 
-Liste 4.4, Unicode karakterlerinden bir String oluşturmaya bir örnektir.
-
-Kod Listesi 4.4. Unicode Karakterlerini Bir Dizeye Dönüştürme
-
-let vec_1 = vec![65, 114, 107, 97, 110, 115, 97, 115];
-let string_1 = String::from_utf8(vec_1).unwrap();
-
-
-Bu örnekte, "Arkansas" için kod noktaları bir vektör içinde yer almaktadır. Örneğin, 65 kod noktası Unicode tablosundaki 'A' karakteridir. from_utf işlevi daha sonra vektörü bir String'e dönüştürür.
+4_4, Unicode karakterlerinden bir String oluşturmaya bir örnektir.
