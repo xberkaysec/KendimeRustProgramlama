@@ -22,3 +22,40 @@ String literalleri, tırnaklar içinde tanımlanan ("...") str değerleridir ve 
 Bu nedenle, bir string literalinin ömrü statiktir. 
 
 4_1/, bir str türünü bildirme ve kullanma şeklini göstermektedir.
+
+# String
+
+Rust standart kütüphanesinde yer alan String veri tipi, karakter değerlerinden oluşan özel bir vektördür.
+String'ler değiştirilebilir ve genişletilebilir.
+Bir vektör gibi, String veri tipi üç alandan oluşur: pointer to the support array, length and capacity. 
+Sport array, String'de yer alan char değerlerini içerir.
+Length, String'deki karakter sayısıdır ve capacity, Sport array'in boyutudur.
+
+Yeni String tiplerini oluşturmanın çeşitli yaklaşımları vardır. 
+Çoğu zaman, String tipleri bir dize literal (yani str) kullanılarak başlatılır. 
+String::from ve str::to_string gibi işlevler, bir str'yi String'e dönüştürür.
+
+4.2/ de, from ve to_string işlevlerini kullanarak bir String literalinden iki String oluşturuyoruz.
+
+New yapıcısını kullanarak String için boş bir dize oluşturabilirsiniz.
+Genellikle, bu daha sonra metin eklenebilen değiştirilebilir bir String'dir.
+
+Liste 4.3'te, değiştirilebilir boş bir String oluşturup ardından "Arizona" dizesini ekliyoruz.
+
+Kod Listesi 4.3. Bir String'e Ekleme
+
+let mut string_1 = String::new();
+string_1.push_str("Arizona");
+
+
+Belirtildiği gibi, String'ler özel bir vektördür - bir karakter koleksiyonudur. Bir String'i doğrudan bir vektorden bile oluşturabilirsiniz. Önce, tamsayılar olarak Unicode kod noktalarından oluşan bir vektör oluşturun. Her kod noktası tek bir karakteri temsil eder. Bir sonraki adım, vektörü from_utf8 işleviyle bir dizeye dönüştürmektir.
+
+Liste 4.4, Unicode karakterlerinden bir String oluşturmaya bir örnektir.
+
+Kod Listesi 4.4. Unicode Karakterlerini Bir Dizeye Dönüştürme
+
+let vec_1 = vec![65, 114, 107, 97, 110, 115, 97, 115];
+let string_1 = String::from_utf8(vec_1).unwrap();
+
+
+Bu örnekte, "Arkansas" için kod noktaları bir vektör içinde yer almaktadır. Örneğin, 65 kod noktası Unicode tablosundaki 'A' karakteridir. from_utf işlevi daha sonra vektörü bir String'e dönüştürür.
