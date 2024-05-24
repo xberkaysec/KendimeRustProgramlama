@@ -49,3 +49,32 @@ Her kod noktası tek bir karakteri temsil eder.
 Bir sonraki adım, vektörü from_utf8 işleviyle bir dizeye dönüştürmektir.
 
 4_4, Unicode karakterlerinden bir String oluşturmaya bir örnektir.
+
+# Length(uzunluk)
+
+Belirli bir Unicode stringin uzunluğu nedir? 
+Bu basit bir soru gibi görünse de karmaşık bir cevaba sahiptir. 
+İlk olarak, dizesinin içinde kaç karakter ya da bayt olduğuna bağlıdır.
+UTF karakterler genellikle 1 ila 4 bayt arasında değişebilir. 
+ASCII karakterler, Unicode kod alanının başlangıcında bulundukları için genellikle 1 bayttır.
+Ancak, kod alanının başka bir yerinde bulunan karakterler için boyutları birden fazla bayt olabilir.
+
+İşte farklı karakter setleri için bayt boyutları:
+
+- ASCII karakterler genellikle 1 bayt büyüklüğündedir.
+- Yunan karakterler genellikle 2 bayt büyüklüğündedir.
+- Çin karakterleri genellikle 3 bayt büyüklüğündedir.
+- Emoji'ler genellikle 4 bayt büyüklüğündedir.
+
+ASCII için, bayt cinsinden uzunluk ve karakter sayısı genellikle aynıdır. 
+Ancak, diğer karakter setleri için bu durum farklılık gösterebilir. 
+len fonksiyonu, dizenin kaç bayt içerdiğini döndürür.
+
+Bir String içindeki karakter sayısını elde etmek için şu adımları izleyebilirsiniz: 
+Stringin karakterlerini içeren bir yineleyiciyi döndüren chars fonksiyonunu kullanarak, 
+yineleyici üzerindeki count fonksiyonunu çağırarak karakter sayısını elde edebilirsiniz.
+
+4_5, bir dizenin hem bayt hem de karakter sayısını göstermektedir:
+
+Bu örnek, farklı dillerde "Merhaba" kelimesinin hem bayt hem de karakter sayısını ekrana yazdırmaktadır.
+Her dil için farklı bayt ve karakter sayılarına dikkat edilmektedir.
