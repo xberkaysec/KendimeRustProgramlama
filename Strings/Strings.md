@@ -1,4 +1,4 @@
-# Giriş
+öm# Giriş
 
 Bu bölüm tamamen Stringlere adanmıştır. Strings, yazılabilir ve yazılamayan karakterlerin koleksiyonlarıdır.
 Rust Stringleri UTF-8 kodlama ile Unicode Standardına uyar.
@@ -137,15 +137,16 @@ Uygulama çalıştırılırken iki kez yeniden tahsis yapılır.
 2. Stringe bir sonraki karakter eklenir. Uzunluk şimdi 6 olur ve kapasiteyi aşar, böylece yeniden tahsis gereklidir.
 3. Stringi tamamlamak için son karakter eklenir. Uzunluk bu sefer 9 olur, tekrar kapasiteyi aşar ve başka bir yeniden tahsis gerçekleşir.
 
-Önceki uygulamanın daha verimli olması için gereken kapasiteyi önceden bilmek önemlidir. with_capacity fonksiyonu, bir String değeri tanımlarken kapasiteyi açıkça ayarlar. İşte fonksiyon tanımı.
+Önceki uygulamanın daha verimli olması için gereken kapasiteyi önceden bilmek önemlidir.
+with_capacity fonksiyonu, bir String değeri tanımlarken kapasiteyi açıkça ayarlar. İşte fonksiyon tanımı.
+
+```rust
 fn with_capacity(capacity: usize) -> String
-4.10 Listeleme, önceki örneğin daha iyi performans gösteren bir versiyonunu göstermektedir.
-Kod Listeleme 4.10. with_capacity fonksiyonunun etkinliğini göstermek
-let mut string_1 = String::with_capacity(9);
-string_1.push('快');
-println!("Kapasite {} Uzunluk {}", string_1.capacity(), string_1.len()); // Kapasite 9 Uzunluk 9
-string_1.push('乐');
-println!("Kapasite {} Uzunluk {}", string_1.capacity(), string_1.len()); // Kapasite 9 Uzunluk 9
-string_1.push_str("的");
-println!("Kapasite {} Uzunluk {}", string_1.capacity(), string_1.len()); // Kapasite 9 Uzunluk 9
-Bu örnekte with_capacity fonksiyonunun eklenmesi oldukça etkilidir. Başlangıçta üç karakteri kapsayacak kadar büyük bir kapasite ayarlıyoruz. Bu 9 byte'lık bir kapasite gerektirir. Doğru kapasite ile, uygulama çalıştırılırken destekleyici dizi yeniden tahsis edilmez ve performans artar.
+```
+
+4_10/ with_capacity fonksiyonunun etkinliğini göstermek.
+
+Bu örnekte with_capacity fonksiyonunun eklenmesi oldukça etkilidir. 
+Başlangıçta üç karakteri kapsayacak kadar büyük bir kapasite ayarlıyoruz.
+Bu 9 byte'lık bir kapasite gerektirir. 
+Doğru kapasite ile, uygulama çalıştırılırken destekleyici dizi yeniden tahsis edilmez ve performans artar.
