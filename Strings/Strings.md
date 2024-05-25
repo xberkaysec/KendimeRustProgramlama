@@ -81,3 +81,34 @@ Her dil için farklı bayt ve karakter sayılarına dikkat edilmektedir.
 
 # String Geliştirme
 
+String değerini genişletebilirsiniz, ancak str tipini genişletemezsiniz. 
+String'in bu amaca yönelik birkaç fonksiyonu bulunmaktadır:
+
+- push
+- push_str
+- insert
+- insert_str
+
+String için push fonksiyonu bir char değerini eklerken, push_str bir String ekler.
+
+4_6/ Bir String'e Ekleme Örneği.
+
+Matematiksel + operatörü String tipi için uygulanmıştır. push_str fonksiyonuna alternatif olarak, stringleri birleştirmenin başka bir yolu da + operatörünü kullanmaktır. + operatörünü kullanmanın avantajı ise kolaylıktır.
+4.7 Listelemede + operatörünü kullanarak bir selam oluşturuyoruz.
+Kod Listeleme 4.7. + Operatörü ile Ekleme
+let mut selam = "Merhaba".to_string();
+let hitap = " Bey".to_string();
+selam = selam + &hitap;
+println!("{}", selam);
+Metin eklemek yerine bir string içine eklemek isteyebilirsiniz. Bir string içine metin eklemek için, insert fonksiyonu bir char değeri eklerken, insert_str bir string ekler. insert fonksiyonu için, ilk parametre örtük ve mevcut String'e işaret eder. İkinci parametre, karakterin nereye ekleneceğini belirtir. Son parametre ise eklenecek karakterdir. insert_str fonksiyonu, son parametre olarak bir String ekler haricinde insert fonksiyonu ile aynıdır. İşte her bir fonksiyon tanımı:
+fn insert(&mut self, position: usize, ch: char)
+fn insert_str(&mut self, position: usize, string: &str)
+45String
+4.8 Listeleme içinde metin eklemenin bir örneği sağlanmaktadır.
+Kod Listeleme 4.8. Bir string içine ekleme
+let mut karakterler = "ac".to_string();
+karakterler.insert(1, 'b');
+println!("{}", karakterler); // abc
+let mut sayılar = "bir üç".to_string();
+sayılar.insert_str(3, " iki");
+println!("{}", sayılar); // bir iki üç
