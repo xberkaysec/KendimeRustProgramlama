@@ -99,15 +99,19 @@ push_str fonksiyonuna alternatif olarak, stringleri birleştirmenin başka bir y
 
 4_7/ + Operatörü ile Ekleme Örneği.
 
-Metin eklemek yerine bir string içine eklemek isteyebilirsiniz. Bir string içine metin eklemek için, insert fonksiyonu bir char değeri eklerken, insert_str bir string ekler. insert fonksiyonu için, ilk parametre örtük ve mevcut String'e işaret eder. İkinci parametre, karakterin nereye ekleneceğini belirtir. Son parametre ise eklenecek karakterdir. insert_str fonksiyonu, son parametre olarak bir String ekler haricinde insert fonksiyonu ile aynıdır. İşte her bir fonksiyon tanımı:
+Metin eklemek yerine bir string içine eklemek isteyebilirsiniz. 
+Bir string içine metin eklemek için, insert fonksiyonu bir char değeri eklerken, insert_str bir string ekler. 
+insert fonksiyonu için, ilk parametre örtük ve mevcut String'e işaret eder.
+İkinci parametre, karakterin nereye ekleneceğini belirtir. 
+Son parametre ise eklenecek karakterdir. 
+insert_str fonksiyonu, son parametre olarak bir String ekler haricinde insert fonksiyonu ile aynıdır.
+
+İşte her bir fonksiyon tanımı:
+
+```rust
 fn insert(&mut self, position: usize, ch: char)
 fn insert_str(&mut self, position: usize, string: &str)
-45String
-4.8 Listeleme içinde metin eklemenin bir örneği sağlanmaktadır.
-Kod Listeleme 4.8. Bir string içine ekleme
-let mut karakterler = "ac".to_string();
-karakterler.insert(1, 'b');
-println!("{}", karakterler); // abc
-let mut sayılar = "bir üç".to_string();
-sayılar.insert_str(3, " iki");
-println!("{}", sayılar); // bir iki üç
+```
+
+4_8/ Bir String İçine Ekleme Örneği.
+
