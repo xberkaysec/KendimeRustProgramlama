@@ -127,12 +127,6 @@ String tipi, vektör veri yapısındaki gibi kapasite yönetimi için aynı fonk
 
 4_9. Capacity ve Length Karşılaştırılması
 
-let mut string_1 = '快'.to_string(); // a
-println!("Kapasite {} Uzunluk {}", string_1.capacity(), string_1.len()); // Kapasite 3 Uzunluk 3
-string_1.push('乐'); // b
-println!("Kapasite {} Uzunluk {}", string_1.capacity(), string_1.len()); // Kapasite 8 Uzunluk 6
-string_1.push_str("的"); // c
-println!("Kapasite {} Uzunluk {}", string_1.capacity(), string_1.len()); // Kapasite 16 Uzunluk 9
 Önceki örnekte, Çince (Mandarin) "mutlu" kelimesi karakter karakter oluşturulmuştur. Çin dilinde "mutlu" kelimesi "快乐的" şeklindedir. Uygulama çalıştırılırken iki kez yeniden tahsis yapılır. Örneğin detayları şöyledir:
 1. "快乐的" ifadesinin ilk karakteriyle bir string tanımlanır. Unicode'de Çince karakterler 3 byte genişliğindedir. İlk kapasite ve uzunluk 3'tür.
 2. Stringe bir sonraki karakter eklenir. Uzunluk şimdi 6 olur ve kapasiteyi aşar, böylece yeniden tahsis gereklidir.
