@@ -93,13 +93,12 @@ String için push fonksiyonu bir char değerini eklerken, push_str bir String ek
 
 4_6/ Bir String'e Ekleme Örneği.
 
-Matematiksel + operatörü String tipi için uygulanmıştır. push_str fonksiyonuna alternatif olarak, stringleri birleştirmenin başka bir yolu da + operatörünü kullanmaktır. + operatörünü kullanmanın avantajı ise kolaylıktır.
-4.7 Listelemede + operatörünü kullanarak bir selam oluşturuyoruz.
-Kod Listeleme 4.7. + Operatörü ile Ekleme
-let mut selam = "Merhaba".to_string();
-let hitap = " Bey".to_string();
-selam = selam + &hitap;
-println!("{}", selam);
+Matematiksel + operatörü String tipi için uygulanmıştır. 
+push_str fonksiyonuna alternatif olarak, stringleri birleştirmenin başka bir yolu da + operatörünü kullanmaktır. 
++ operatörünü kullanmanın avantajı ise kolaylıktır.
+
+4_7/ + Operatörü ile Ekleme Örneği.
+
 Metin eklemek yerine bir string içine eklemek isteyebilirsiniz. Bir string içine metin eklemek için, insert fonksiyonu bir char değeri eklerken, insert_str bir string ekler. insert fonksiyonu için, ilk parametre örtük ve mevcut String'e işaret eder. İkinci parametre, karakterin nereye ekleneceğini belirtir. Son parametre ise eklenecek karakterdir. insert_str fonksiyonu, son parametre olarak bir String ekler haricinde insert fonksiyonu ile aynıdır. İşte her bir fonksiyon tanımı:
 fn insert(&mut self, position: usize, ch: char)
 fn insert_str(&mut self, position: usize, string: &str)
