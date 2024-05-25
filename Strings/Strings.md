@@ -127,10 +127,16 @@ String tipi, vektör veri yapısındaki gibi kapasite yönetimi için aynı fonk
 
 4_9. Capacity ve Length Karşılaştırılması
 
-Önceki örnekte, Çince (Mandarin) "mutlu" kelimesi karakter karakter oluşturulmuştur. Çin dilinde "mutlu" kelimesi "快乐的" şeklindedir. Uygulama çalıştırılırken iki kez yeniden tahsis yapılır. Örneğin detayları şöyledir:
+Önceki örnekte, Çince (Mandarin) "mutlu" kelimesi karakter karakter oluşturulmuştur. 
+Çin dilinde "mutlu" kelimesi "快乐的" şeklindedir.
+Uygulama çalıştırılırken iki kez yeniden tahsis yapılır.
+
+Örneğin detayları şöyledir:
+
 1. "快乐的" ifadesinin ilk karakteriyle bir string tanımlanır. Unicode'de Çince karakterler 3 byte genişliğindedir. İlk kapasite ve uzunluk 3'tür.
 2. Stringe bir sonraki karakter eklenir. Uzunluk şimdi 6 olur ve kapasiteyi aşar, böylece yeniden tahsis gereklidir.
 3. Stringi tamamlamak için son karakter eklenir. Uzunluk bu sefer 9 olur, tekrar kapasiteyi aşar ve başka bir yeniden tahsis gerçekleşir.
+
 Önceki uygulamanın daha verimli olması için gereken kapasiteyi önceden bilmek önemlidir. with_capacity fonksiyonu, bir String değeri tanımlarken kapasiteyi açıkça ayarlar. İşte fonksiyon tanımı.
 fn with_capacity(capacity: usize) -> String
 4.10 Listeleme, önceki örneğin daha iyi performans gösteren bir versiyonunu göstermektedir.
