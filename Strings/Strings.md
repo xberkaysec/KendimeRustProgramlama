@@ -115,3 +115,37 @@ fn insert_str(&mut self, position: usize, string: &str)
 
 4_8/ Bir String İçine Ekleme Örneği.
 
+# Capacity(kapasite)
+
+String'ler, özel bir vektör olarak tasarlanmıştır. 
+Bu vektörler, string karakterlerini depolamak için kullanılan bir destekleyici dizi(backing array) ve bir kapasiteye sahiptir.
+Kapasite, destekleyici dizinin boyutunu belirtirken, uzunluk ise String'in mevcut karakter sayısını ifade eder. 
+Eğer uzunluk, kapasiteyi aşarsa, destekleyici dizi genişletilerek yeniden tahsis edilmelidir. 
+Ancak, backing array'in yeniden tahsis edilmesi performans açısından olumsuz etkilere neden olabilir. 
+Bu yüzden, gereksiz yeniden tahsis işlemlerinden kaçınarak uygulamanın performansını artırmak önemlidir. 
+String tipi, vektör veri yapısındaki gibi kapasite yönetimi için aynı fonksiyonlara sahiptir.
+
+4_9. Capacity ve Length Karşılaştırılması
+
+let mut string_1 = '快'.to_string(); // a
+println!("Kapasite {} Uzunluk {}", string_1.capacity(), string_1.len()); // Kapasite 3 Uzunluk 3
+string_1.push('乐'); // b
+println!("Kapasite {} Uzunluk {}", string_1.capacity(), string_1.len()); // Kapasite 8 Uzunluk 6
+string_1.push_str("的"); // c
+println!("Kapasite {} Uzunluk {}", string_1.capacity(), string_1.len()); // Kapasite 16 Uzunluk 9
+Önceki örnekte, Çince (Mandarin) "mutlu" kelimesi karakter karakter oluşturulmuştur. Çin dilinde "mutlu" kelimesi "快乐的" şeklindedir. Uygulama çalıştırılırken iki kez yeniden tahsis yapılır. Örneğin detayları şöyledir:
+1. "快乐的" ifadesinin ilk karakteriyle bir string tanımlanır. Unicode'de Çince karakterler 3 byte genişliğindedir. İlk kapasite ve uzunluk 3'tür.
+2. Stringe bir sonraki karakter eklenir. Uzunluk şimdi 6 olur ve kapasiteyi aşar, böylece yeniden tahsis gereklidir.
+3. Stringi tamamlamak için son karakter eklenir. Uzunluk bu sefer 9 olur, tekrar kapasiteyi aşar ve başka bir yeniden tahsis gerçekleşir.
+Önceki uygulamanın daha verimli olması için gereken kapasiteyi önceden bilmek önemlidir. with_capacity fonksiyonu, bir String değeri tanımlarken kapasiteyi açıkça ayarlar. İşte fonksiyon tanımı.
+fn with_capacity(capacity: usize) -> String
+4.10 Listeleme, önceki örneğin daha iyi performans gösteren bir versiyonunu göstermektedir.
+Kod Listeleme 4.10. with_capacity fonksiyonunun etkinliğini göstermek
+let mut string_1 = String::with_capacity(9);
+string_1.push('快');
+println!("Kapasite {} Uzunluk {}", string_1.capacity(), string_1.len()); // Kapasite 9 Uzunluk 9
+string_1.push('乐');
+println!("Kapasite {} Uzunluk {}", string_1.capacity(), string_1.len()); // Kapasite 9 Uzunluk 9
+string_1.push_str("的");
+println!("Kapasite {} Uzunluk {}", string_1.capacity(), string_1.len()); // Kapasite 9 Uzunluk 9
+Bu örnekte with_capacity fonksiyonunun eklenmesi oldukça etkilidir. Başlangıçta üç karakteri kapsayacak kadar büyük bir kapasite ayarlıyoruz. Bu 9 byte'lık bir kapasite gerektirir. Doğru kapasite ile, uygulama çalıştırılırken destekleyici dizi yeniden tahsis edilmez ve performans artar.
