@@ -146,7 +146,50 @@ fn with_capacity(capacity: usize) -> String
 
 4_10/ with_capacity fonksiyonunun etkinliğini göstermek.
 
-Bu örnekte with_capacity fonksiyonunun eklenmesi oldukça etkilidir. 
-Başlangıçta üç karakteri kapsayacak kadar büyük bir kapasite ayarlıyoruz.
-Bu 9 byte'lık bir kapasite gerektirir. 
-Doğru kapasite ile, uygulama çalıştırılırken destekleyici dizi yeniden tahsis edilmez ve performans artar.
+# String Değerine Erişim
+
+String elemanlarına nasıl erişileceğini gösteren bir örnek ile başlayalım. 
+Örnek, String'in ikinci karakterine erişmek.
+
+```rust
+let string_1 = "merhaba".to_string();
+let karakter = string_1[1];
+```
+
+Ancak, yukarıdaki örnek bir derleyici hatası oluşturur:
+
+```
+error[E0277]: String türü {integer} tarafından indekslenemez
+--> src\main.rs:3:19
+|
+3 | let karakter = string_1[1];
+| ^^^^^^^^^^^ String {integer} tarafından indekslenemez
+```
+
+Hata mesajı doğru ancak altta yatan problemin tam olarak açıklanmıyor. 
+Sorun, bir String'e bir indeksle erişmeye çalışmakın belirsiz olacağıdır. 
+İndeks, bayt mı yoksa karakter pozisyonunu mu işaret eder? 
+Bu bilgi olmadan bu ifadeyi çözmek mümkün değil veya en azından güvenli değil.
+Rust'ta bir indeksle bir karaktere erişmek mümkün değildir.
+
+Bununla birlikte, bir String dilimi kullanarak String içindeki karakterlere erişebilirsiniz. 
+Başlangıç indeksi ve bitiş indeksi bayt pozisyonunu belirtir.
+Slicing(dilimleme) notasyonunun sonucu ise str türündedir.
+
+```rust
+string[start indeksi..end indeksi]
+```
+
+Slice karakterin sınırlarına uymalıdır. 
+Uymadığı takdirde, çalışma zamanında bir panik oluşur. A
+
+Kod örneği başarılı bir şekilde çalışır:
+
+```rust
+let string_1 = "mutlu".to_string();
+let slice = &string_1[3..=5];
+println!("{:?}", slice);
+
+// 3_11
+```
+
