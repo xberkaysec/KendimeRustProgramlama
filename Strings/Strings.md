@@ -311,17 +311,13 @@ println! makrosu sonucu gösterir. Makro içinde embedded string(gömülü dize)
 
 4_17'de, belirtilen String'in sonunda "Berkay" aranır. Sonuç true döner.
 
-Küçük harf/küçük harf karşılaştırmaları genellikle faydalıdır. Listeleme 4.20, sadece harf büyüklüğünde farklı olan iki Dizeyi karşılaştırır. İkinci Dize, bir referans (&) kullanılarak ödünç alınmıştır. İkinci String'in konumunu özgür bırakarak, ileriye dönük bu konumda ikinci String'i kullanılamaz hale getirmez.
-
-Listeleme 4.20. Büyük/küçük harfe duyarsız karşılaştırma
-
-```rust
-let string_4 = "BİR".to_string();
-let string_5 = "bir".to_string();
-let sonuc = string_4.eq_ignore_ascii_case(&string_5);
-// "BİR" equals "bir": true
-println!(r#""{string_4}" ile "{string_5}" eşit: {sonuc}"#);
-```
+Küçük harf/küçük harf karşılaştırmaları genellikle faydalıdır. 
+4.18, Bu kod, büyük-küçük harfe duyarsız olarak iki string karşılaştırır ve sonucu ekrana yazdırır. 
+İlk olarak, birinci string ("Merhaba") ve ikinci string ("merhaba") oluşturulur.
+`eq_ignore_ascii_case` fonksiyonu kullanılarak, birinci dize ile ikinci dize karşılaştırılır. 
+Bu fonksiyon büyük-küçük harfe duyarsız olarak karşılaştırma yapar.
+Sonuç (`sonuc`) değişkenine karşılaştırmanın doğruluğu atanır.
+`println!` makrosu ile dize1 ve dize2'nin karşılaştırma sonucu ekrana yazdırılır.
 
 Listeleme 4.21'de, replace fonksiyonu "Bob" desenini "Alice" ile değiştirir. Sonuç güncellenmiş String'i verir.
 
@@ -367,6 +363,3 @@ let string_9 = "Harika!";
 println!("{} : {}", string_9, string_9.to_uppercase());
 // Harika! : HARİKA!
 ```
-```
-
-Bu metni Github'a Markdown formatında yükleyerek düzgün bir görünüm elde edebilirsiniz. Başka bir konuda daha yardımcı olabilir miyim?
