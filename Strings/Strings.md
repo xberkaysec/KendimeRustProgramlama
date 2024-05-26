@@ -193,3 +193,30 @@ println!("{:?}", slice);
 // 3_11
 ```
 
+# String Karakterleri
+
+String'ler karakterlerden oluşur. Tüm karakterleri dolaşmak bazen faydalı olabilir.
+Örneğin, her bir karakter üzerinde bir işlem uygulayabilir, her bir karakteri kodlayabilir,
+karakterleri sayabilir veya harf "a" içeren ve çıkarılması gereken kelimeleri arayabilirsiniz, 
+chars fonksiyonu, bir str değerinin karakterlerini döndüren bir iterator sağlar.
+
+Örnek, bir kelimenin tüm karakterlerini göstermektedir.
+
+```rust
+let check_ch = "merhaba".to_string();
+
+    for ch in check_ch.chars() {
+        println!("{}", ch);
+    }
+}
+```
+
+Bir iterator'ün nth fonksiyonunu kullanarak belirli bir konumdaki bir karakteri gösterebilirsiniz. 
+Burada, String'in üçüncü karakterini gösteriyoruz:
+
+```rust
+println!("{}", check_ch.chars().nth(2).unwrap());
+```
+Bir karakterin bulunduğu konumu verilen bir fonksiyon kullanarak bulabilir ve yazdırabilirsiniz. 
+Bu şekilde, String üzerinde işlemler yapabilir ve karakterler üzerinde manipülasyonlar yapabilirsiniz.
+
