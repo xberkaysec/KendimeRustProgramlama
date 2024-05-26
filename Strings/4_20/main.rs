@@ -1,8 +1,8 @@
 fn main() {
 
-    let string_7 = "Bu gün hava çok güzel.";
+    let string_1 = "Bu gün hava çok güzel.";
 
-    let yineleyici = string_7.split(" ");
+    let yineleyici = string_1.split(" ");
     // Kelime sihrini anlatır.
     
     for kelime in yineleyici {
