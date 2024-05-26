@@ -309,15 +309,7 @@ Ardından `shrink_to_fit` fonksiyonu kapasiteyi buna göre azaltır.
 4.16'da, contains fonksiyonu String'i "berkay" pattern(deseni) için tarar ve true döndürür.
 println! makrosu sonucu gösterir. Makro içinde embedded string(gömülü dize) olduğu için format string içinde "r#" öneki ile raw string kullanılmıştır.
 
-Listeleme 4.19'da, belirtilen String'in sonunda "Topeka" aranır. Sonuç true döner.
-
-Listeleme 4.19. Dize sonunu doğrulama
-```rust
-let string_3 = "Topeka'ya gidiyorum".to_string();
-let sonuc = string_3.ends_with("Topeka");
-// "Topeka" sonuç olarak "Topeka'ya gidiyorum": true
-println!(r#" "{string_3}" cümlesi için "{Topeka}" sonucu: {sonuc}"#);
-```
+4_17'de, belirtilen String'in sonunda "Berkay" aranır. Sonuç true döner.
 
 Küçük harf/küçük harf karşılaştırmaları genellikle faydalıdır. Listeleme 4.20, sadece harf büyüklüğünde farklı olan iki Dizeyi karşılaştırır. İkinci Dize, bir referans (&) kullanılarak ödünç alınmıştır. İkinci String'in konumunu özgür bırakarak, ileriye dönük bu konumda ikinci String'i kullanılamaz hale getirmez.
 
