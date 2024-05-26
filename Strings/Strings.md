@@ -234,7 +234,26 @@ Tersi mümkün değildir, yani str'den String türüne dönüştürme.
 
 4_13/, deref zorlamasını kullanan bir örneği göstermektedir.
 
-Bu örnekte, func._deref fonksiyonunun bir &str parametresi vardır. 
+Bu örnekte, func_deref fonksiyonunun bir &str parametresi vardır. 
 Main fonksiyonunda, "Merhaba" için bir String bildiriyoruz.
 Daha sonra, func_deref &String ile başarılı bir şekilde çağrılıyor.
+
+# Biçimlendirilmiş String
+
+Gösterişli stringler oluşturmak için format! makrosu oldukça kullanışlıdır. 
+format! makrosu, dönüş biçimli bir string sağlayan print ailesiyle benzerdir.
+Bu, aynı parametreleri içerir. print! ve format! makroları, std::fmt modülüne dayanır.
+
+format! makrosunu gösteren bir örnek:
+
+```rust
+let sol = 5;
+let sağ = 10;
+let sonuç = format!("{sol} + {sağ} = {sonuç}", sonuç=sol+sağ);
+println!("{}", sonuç); // 5 + 10 = 15
+```
+
+Bu örneğin çıktısı, biçimlendirilmiş bir string olan "5 + 10 = 15" olacaktır.
+Bu şekilde, format! makrosu kullanarak değişken değerlerini biçimlendirerek string oluşturabilir ve ekrana yazdırabilirsiniz. 
+Bu işlem, stringleri daha okunaklı ve kullanıcı dostu hale getirmenize olanak sağlar.
 
