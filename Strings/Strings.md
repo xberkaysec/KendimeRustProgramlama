@@ -311,7 +311,6 @@ println! makrosu sonucu gösterir. Makro içinde embedded string(gömülü dize)
 
 4_17'de, belirtilen String'in sonunda "Berkay" aranır. Sonuç true döner.
 
-Küçük harf/küçük harf karşılaştırmaları genellikle faydalıdır. 
 4.18, Bu kod, büyük-küçük harfe duyarsız olarak iki string karşılaştırır ve sonucu ekrana yazdırır. 
 İlk olarak, birinci string ("Merhaba") ve ikinci string ("merhaba") oluşturulur.
 `eq_ignore_ascii_case` fonksiyonu kullanılarak, birinci dize ile ikinci dize karşılaştırılır. 
@@ -319,18 +318,11 @@ Bu fonksiyon büyük-küçük harfe duyarsız olarak karşılaştırma yapar.
 Sonuç (`sonuc`) değişkenine karşılaştırmanın doğruluğu atanır.
 `println!` makrosu ile dize1 ve dize2'nin karşılaştırma sonucu ekrana yazdırılır.
 
-Listeleme 4.21'de, replace fonksiyonu "Bob" desenini "Alice" ile değiştirir. Sonuç güncellenmiş String'i verir.
+Listeleme 4_19'da, replace fonksiyonu "Can" desenini "Berkay" ile değiştirir.
+Sonuç güncellenmiş String'i verir.
 
-Listeleme 4.21. Bir dize içinde değiştirme
 
-```rust
-let string_6 = "Bob alışverişe gitti, sonra Bob eve döndü.".to_string();
-let sonuc_string = string_6.replace("Bob", "Alice");
-// Yeni dize: Alice alışverişe gitti, sonra Alice eve döndü.
-println!("Yeni dize: {}", sonuc_string);
-```
-
-split fonksiyonu bir dizeyi her ayırıcıda böler. Listeleme 4.22'de, Dize boşluklarda ayraç olarak kullanılarak bölenir. Fonksiyon işlemle oluşturulan String koleksiyonu için bir yineleyici döndürür. Ardından bunları tek tek işleyebilirsiniz.
+Listeleme 4.22'de, Dize boşluklarda ayraç olarak kullanılarak bölenir. Fonksiyon işlemle oluşturulan String koleksiyonu için bir yineleyici döndürür. Ardından bunları tek tek işleyebilirsiniz.
 
 Listeleme 4.22. Boşlukları ayraç olarak kullanarak bir Dizeyi bölmek
 
