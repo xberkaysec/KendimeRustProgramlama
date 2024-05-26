@@ -1,4 +1,4 @@
-öm# Giriş
+# Giriş
 
 Bu bölüm tamamen Stringlere adanmıştır. Strings, yazılabilir ve yazılamayan karakterlerin koleksiyonlarıdır.
 Rust Stringleri UTF-8 kodlama ile Unicode Standardına uyar.
