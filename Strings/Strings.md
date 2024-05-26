@@ -263,3 +263,54 @@ Bu örneğin çıktısı, biçimlendirilmiş bir string olan "10 + 15 = 25" olac
 Bu şekilde, format! makrosu kullanarak değişken değerlerini biçimlendirerek string oluşturabilir ve ekrana yazdırabilirsiniz. 
 Bu işlem, stringleri daha okunaklı ve kullanıcı dostu hale getirmenize olanak sağlar.
 
+# Faydalı Fonksiyonlar
+
+Rust, String manipülasyonunu destekleyen etkileyici bir string fonksiyonlarının çeşitliliğine sahiptir. 
+İşte String için daha faydalı fonksiyonlardan bazıları.
+
+- **clear**: Bir Dizeyi siler ancak mevcut kapasiteyi azaltmaz. İstenirse, kapasiteyi `shrink_to_fit` fonksiyonu ile azaltabilirsiniz.
+  ```rust
+  fn clear(&mut self)
+  ```
+- **contains**: Bir Dizide deseni arar ve bulunursa true döndürür.
+  ```rust
+  fn contains<'a, P>(&'a self, pat: P) -> bool
+  ```
+- **ends_with**: Desenin Dize sonunda bulunması durumunda true döndürür.
+  ```rust
+  fn ends_with<'a, P>(&'a self, pat: P) -> bool
+  ```
+- **eq_ignore_ascii_case**: Dize deseniyle eşleşirse true döndürür. Karşılaştırma harf büyüklüğüne duyarsızdır.
+  ```rust
+  fn eq_ignore_ascii_case(&self, other: &str) -> bool
+  ```
+- **replace**: Bir Dizede bulunan deseni değiştirir. Değiştirilmiş Dize döndürülür.
+  ```rust
+  fn replace<'a, P>(&'a self, from: P, to: &str) -> String
+  ```
+- **split**: Bir Dizeyi belirtilen ayırıcıda ayrı Dizelere böler. Ayırılmış Dizeleri numaralandırmak için bir yineleyici döndürür.
+  ```rust
+  fn split<'a, P>(&'a self, pat: P) -> Split<’a, P>
+  ```
+- **starts_with**: Dize bu desenle başlıyorsa true döndürür.
+  ```rust
+  fn starts_with<'a, P>(&'a self, pat: P) -> bool
+  ```
+- **to_uppercase**: Dizeyi büyük harfe dönüştürür.
+  ```rust
+  fn to_uppercase(&self) -> String
+
+Her bir fonksiyonu nasıl kullanacağımızı gösterelim.
+
+Aşağıda ki kod, mevcut bir Stringi boşalttıktan sonra String karakter içermemektedir.
+Ardından `shrink_to_fit` fonksiyonu kapasiteyi buna göre azaltır.
+`is_empty` fonksiyonu, bir Stringin karakter içerip içermediğini kontrol eder.
+
+```rust
+let mut string_1="birşey ".to_string();
+string_1.clear();
+string_1.shrink_to_fit();
+// string_1 boş: true
+println!( "string_1 boş: {}",
+string_1.is_empty());
+```
