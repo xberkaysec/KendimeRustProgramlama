@@ -220,3 +220,21 @@ println!("{}", check_ch.chars().nth(2).unwrap());
 Bir karakterin bulunduğu konumu verilen bir fonksiyon kullanarak bulabilir ve yazdırabilirsiniz. 
 Bu şekilde, String üzerinde işlemler yapabilir ve karakterler üzerinde manipülasyonlar yapabilirsiniz.
 
+```
+3_12/
+```
+
+# Deref Zorlaması
+
+Beklenen herhangi bir &str yerine ödünç alınmış bir String, &String ekleyebilirsiniz. 
+Bu durumda, String, str türünün yöntemlerini devralır.
+Bu, String türünün str için deref trait'ini uyguladığından mümkündür. 
+Uygun şekilde, bu dönüşüm deref zorlaması olarak adlandırılır.
+Tersi mümkün değildir, yani str'den String türüne dönüştürme.
+
+4_13/, deref zorlamasını kullanan bir örneği göstermektedir.
+
+Bu örnekte, func._deref fonksiyonunun bir &str parametresi vardır. 
+Main fonksiyonunda, "Merhaba" için bir String bildiriyoruz.
+Daha sonra, func_deref &String ile başarılı bir şekilde çağrılıyor.
+
