@@ -321,37 +321,9 @@ Sonuç (`sonuc`) değişkenine karşılaştırmanın doğruluğu atanır.
 Listeleme 4_19'da, replace fonksiyonu "Can" desenini "Berkay" ile değiştirir.
 Sonuç güncellenmiş String'i verir.
 
+4_20'de, 
 
-Listeleme 4.22'de, Dize boşluklarda ayraç olarak kullanılarak bölenir. Fonksiyon işlemle oluşturulan String koleksiyonu için bir yineleyici döndürür. Ardından bunları tek tek işleyebilirsiniz.
+4_21'se, String "Ankara" ile başladığı için starts_with fonksiyonu true döndürür.
 
-Listeleme 4.22. Boşlukları ayraç olarak kullanarak bir Dizeyi bölmek
-
-```rust
-let string_7 = "Kelime sihrini anlatır.";
-let yineleyici = string_7.split(" ");
-// Kelime sihrini anlatır.
-for kelime in yineleyici {
-    print!("{} ", kelime);
-}
-```
-
-Listeleme 4.23'te, Dize "Sydney" ile başladığı için starts_with fonksiyonu true döndürür.
-
-Listeleme 4.23. Dize önekini doğrulama
-
-```rust
-let string_8 = "Sydney manzaralıdır.".to_string();
-let sonuc = string_8.starts_with("Sydney");
-// "Sydney" öneki için "Sydney manzaralıdır.": true
-println!(r#" "{string_8}" cümlesi için "{Sydney}" sonucu: {sonuc}"#);
-```
-
-Listenme 4.24'te, to_uppercase fonksiyonu "Harika!" kelimesini büyük harfe çevirir. Tabii ki, bir de to_lowercase fonksiyonu bulunmaktadır.
-
-Listeleme 4.24. Bir dizeyi büyük harfe dönüştürme
-
-```rust
-let string_9 = "Harika!";
-println!("{} : {}", string_9, string_9.to_uppercase());
-// Harika! : HARİKA!
-```
+4_22'de, to_uppercase fonksiyonu "Berkay!" kelimesini büyük harfe çevirir.
+Tabii ki, bir de to_lowercase fonksiyonu bulunmaktadır.
