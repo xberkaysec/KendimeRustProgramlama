@@ -247,13 +247,19 @@ Bu, aynı parametreleri içerir. print! ve format! makroları, std::fmt modülü
 format! makrosunu gösteren bir örnek:
 
 ```rust
-let sol = 5;
-let sağ = 10;
-let sonuç = format!("{sol} + {sağ} = {sonuç}", sonuç=sol+sağ);
-println!("{}", sonuç); // 5 + 10 = 15
+fn main() {
+
+    let sayi_1 = 10;
+    let sayi_2 = 15;
+
+    let sonuc = format!("{sayi_1} + {sayi_2} = {sonuc}", sonuc=sayi_1+sayi_2);
+    
+    println!("{}", sonuc); 
+    
+}
 ```
 
-Bu örneğin çıktısı, biçimlendirilmiş bir string olan "5 + 10 = 15" olacaktır.
+Bu örneğin çıktısı, biçimlendirilmiş bir string olan "10 + 15 = 25" olacaktır.
 Bu şekilde, format! makrosu kullanarak değişken değerlerini biçimlendirerek string oluşturabilir ve ekrana yazdırabilirsiniz. 
 Bu işlem, stringleri daha okunaklı ve kullanıcı dostu hale getirmenize olanak sağlar.
 
