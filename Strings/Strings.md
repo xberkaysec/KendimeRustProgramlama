@@ -321,7 +321,8 @@ Sonuç (`sonuc`) değişkenine karşılaştırmanın doğruluğu atanır.
 Listeleme 4_19'da, replace fonksiyonu "Can" desenini "Berkay" ile değiştirir.
 Sonuç güncellenmiş String'i verir.
 
-4_20'de, 
+4_20'de, Bu örnekte, bir metin içerisinde bulunan kelimeleri ayırmak için `split` fonksiyonunu kullandık. 
+Metnimiz "Bu gün hava çok güzel." olduğu için bu metni boşluklara göre böldük ve her kelimeyi ayrı ayrı ekrana yazdırdık.
 
 4_21'se, String "Ankara" ile başladığı için starts_with fonksiyonu true döndürür.
 
