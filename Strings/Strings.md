@@ -302,7 +302,79 @@ Rust, String manipülasyonunu destekleyen etkileyici bir string fonksiyonların�
 
 Her bir fonksiyonu nasıl kullanacağımızı gösterelim.
 
-, mevcut bir Stringi boşalttıktan sonra String karakter içermemektedir.
+4_15, mevcut bir Stringi boşalttıktan sonra String karakter içermemektedir.
 Ardından `shrink_to_fit` fonksiyonu kapasiteyi buna göre azaltır.
 `is_empty` fonksiyonu, bir Stringin karakter içerip içermediğini kontrol eder.
 
+4.16'da, contains fonksiyonu String'i "berkay" pattern(deseni) için tarar ve true döndürür.
+println! makrosu sonucu gösterir. Makro içinde embedded string(gömülü dize) olduğu için format string içinde "r#" öneki ile raw string kullanılmıştır.
+
+Listeleme 4.19'da, belirtilen String'in sonunda "Topeka" aranır. Sonuç true döner.
+
+Listeleme 4.19. Dize sonunu doğrulama
+```rust
+let string_3 = "Topeka'ya gidiyorum".to_string();
+let sonuc = string_3.ends_with("Topeka");
+// "Topeka" sonuç olarak "Topeka'ya gidiyorum": true
+println!(r#" "{string_3}" cümlesi için "{Topeka}" sonucu: {sonuc}"#);
+```
+
+Küçük harf/küçük harf karşılaştırmaları genellikle faydalıdır. Listeleme 4.20, sadece harf büyüklüğünde farklı olan iki Dizeyi karşılaştırır. İkinci Dize, bir referans (&) kullanılarak ödünç alınmıştır. İkinci String'in konumunu özgür bırakarak, ileriye dönük bu konumda ikinci String'i kullanılamaz hale getirmez.
+
+Listeleme 4.20. Büyük/küçük harfe duyarsız karşılaştırma
+
+```rust
+let string_4 = "BİR".to_string();
+let string_5 = "bir".to_string();
+let sonuc = string_4.eq_ignore_ascii_case(&string_5);
+// "BİR" equals "bir": true
+println!(r#""{string_4}" ile "{string_5}" eşit: {sonuc}"#);
+```
+
+Listeleme 4.21'de, replace fonksiyonu "Bob" desenini "Alice" ile değiştirir. Sonuç güncellenmiş String'i verir.
+
+Listeleme 4.21. Bir dize içinde değiştirme
+
+```rust
+let string_6 = "Bob alışverişe gitti, sonra Bob eve döndü.".to_string();
+let sonuc_string = string_6.replace("Bob", "Alice");
+// Yeni dize: Alice alışverişe gitti, sonra Alice eve döndü.
+println!("Yeni dize: {}", sonuc_string);
+```
+
+split fonksiyonu bir dizeyi her ayırıcıda böler. Listeleme 4.22'de, Dize boşluklarda ayraç olarak kullanılarak bölenir. Fonksiyon işlemle oluşturulan String koleksiyonu için bir yineleyici döndürür. Ardından bunları tek tek işleyebilirsiniz.
+
+Listeleme 4.22. Boşlukları ayraç olarak kullanarak bir Dizeyi bölmek
+
+```rust
+let string_7 = "Kelime sihrini anlatır.";
+let yineleyici = string_7.split(" ");
+// Kelime sihrini anlatır.
+for kelime in yineleyici {
+    print!("{} ", kelime);
+}
+```
+
+Listeleme 4.23'te, Dize "Sydney" ile başladığı için starts_with fonksiyonu true döndürür.
+
+Listeleme 4.23. Dize önekini doğrulama
+
+```rust
+let string_8 = "Sydney manzaralıdır.".to_string();
+let sonuc = string_8.starts_with("Sydney");
+// "Sydney" öneki için "Sydney manzaralıdır.": true
+println!(r#" "{string_8}" cümlesi için "{Sydney}" sonucu: {sonuc}"#);
+```
+
+Listenme 4.24'te, to_uppercase fonksiyonu "Harika!" kelimesini büyük harfe çevirir. Tabii ki, bir de to_lowercase fonksiyonu bulunmaktadır.
+
+Listeleme 4.24. Bir dizeyi büyük harfe dönüştürme
+
+```rust
+let string_9 = "Harika!";
+println!("{} : {}", string_9, string_9.to_uppercase());
+// Harika! : HARİKA!
+```
+```
+
+Bu metni Github'a Markdown formatında yükleyerek düzgün bir görünüm elde edebilirsiniz. Başka bir konuda daha yardımcı olabilir miyim?
