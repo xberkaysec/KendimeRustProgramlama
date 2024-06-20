@@ -61,12 +61,8 @@ Bir pozisyonel argümanı belirtmek için bir index kullanırsınız: {index}.
 Pozisyonel argümanları kullanmanın temel faydası, parametrelerin sırasız bir şekilde görüntülenmesine olanak tanır.
 5.2'de verilen örnekte, formatted string argümanları ters sırada görüntülenir.
 
-Bir biçim dizesinde, yer tutucuların türlerini karıştırabilirsiniz: pozisyonel olmayan ve pozisyonel. Ancak, pozisyonel olmayan argümanlar önce değerlendirilir. Bölüm 5.3'te gösterilen kaynak kod, her iki argüman türünün de kullanımını göstermektedir.
+Bir format string de, yer tutucuların türlerini karıştırabilirsiniz: pozisyonel olmayan ve pozisyonel. 
+Ancak, pozisyonel olmayan argümanlar önce değerlendirilir. 
 
-Kod Listeleme 5.3. Pozisyonel olmayan ve pozisyonel argümanların karıştırılması
-let (birinci, ikinci, üçüncü, dördüncü) = (1, 2, 3, 4);
-let sonuç = birinci + ikinci + üçüncü + dördüncü;
-println!(
-"{3} + {} + {} + {} = {4}",
-birinci, ikinci, üçüncü,
-dördüncü, sonuç); // 4 + 1 + 2 + 3 = 10
+5.3'te gösterilen kaynak kod, her iki argüman türünün de kullanımını göstermektedir.
+
