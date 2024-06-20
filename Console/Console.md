@@ -72,3 +72,14 @@ Format stringlerdeki yer tutucular aynı zamanda değişkenlere de referans olab
 Bir değişken argüman, bir tür pozisyonel argümandır. 
 İlgili değişken, kapsam içinde olmalı ve belirtilen zamanda görünür olmalıdır. 
 5.4'te, ilk, iki, üc, dört ve sonuc değişkenleri, biçim dizisindeki yer tutucular içinde referans alınmıştır.
+
+# Named(isimli) Argümanlar
+
+print! makroları isimli argümanları kullanabilir.
+Sözdizimi isim=değer şeklindedir. 
+Bu argümanlar daha sonra format stringteki yer tutucular içinde kullanılabilir. 
+5.5, 'sonuc' isimli bir argümandır ve format string son yer tutucusu içinde kullanılmaktadır.
+
+Her isimli argümanlar ve konumsal argümanlar, format stringdeki yer tutucular içinde görünebilir. 
+Ancak, konumsal argümanlar parametre listesinde isimli argümanları takip edemez.
+5.6, konumsal argümanlardan önce ad, bir isimli argümandır ve println! makrosunda başka herhangi bir konumsal argümanlardan önce gelir.
