@@ -66,3 +66,9 @@ Ancak, pozisyonel olmayan argümanlar önce değerlendirilir.
 
 5.3'te gösterilen kaynak kod, her iki argüman türünün de kullanımını göstermektedir.
 
+# Variable(Değişken) Argümanlar
+
+Format stringlerdeki yer tutucular aynı zamanda değişkenlere de referans olabilir. 
+Bir değişken argüman, bir tür pozisyonel argümandır. 
+İlgili değişken, kapsam içinde olmalı ve belirtilen zamanda görünür olmalıdır. 
+5.4'te, ilk, iki, üc, dört ve sonuc değişkenleri, biçim dizisindeki yer tutucular içinde referans alınmıştır.
