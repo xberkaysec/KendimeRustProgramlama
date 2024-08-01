@@ -102,3 +102,28 @@ Varsayılan hizalamayı şu karakterlerle geçersiz kılabilirsiniz:
 ```
  
 5_7 kod örneği, bir placeholders genişliğini ve hizalamasını nasıl tanımlayacağınızı göstermektedir.
+
+Bu bölümde, yazdırılan verilerin düzgün bir şekilde hizalanması ve biçimlendirilmesi üzerinde durulmaktadır.
+Aşağıda, iki sütunlu bir rapor örneği verilmiştir.
+İlk sütun yedi karakter genişliğinde metin içerirken, ikinci sütun on karakter genişliğinde sayılardan oluşur. 
+İlk sütun için varsayılan hizalama sola, ikinci sütun için ise açıkça sola hizalama ayarlanmıştır.
+
+```
+Text   Value
+====   =====
+Bir    100
+İki    200
+Üç     300
+```
+
+Decimal sayılar için placeholdersda hassasiyet ekleyebilirsiniz. 
+Bu, ondalık noktadan sonraki basamak sayısını kontrol etmenizi sağlar. 
+Placeholdersda, padding'ten sonra ondalık hassasiyeti belirtebilirsiniz.
+Sözdizimi şu şekildedir: padding.precision. Eğer padding yoksa, sözdizimi sadece .precision şeklindedir.
+Tam sayılar için yer tutucudaki hassasiyet göz ardı edilir.
+
+
+5_7 kodda iki ondalık sayı gösterilmektedir.
+İlk sayı, on karakter genişliğinde iki ondalık basamakla,
+ikinci sayı ise varsayılan genişlikte 6 ondalık basamakla görüntülenmektedir.
+
