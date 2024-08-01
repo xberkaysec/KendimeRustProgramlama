@@ -183,3 +183,6 @@ Burada:
 ```
 Result: 1.23      3.12
 ```
+
+6_2'de mesela Binary ile ilgili örnek var.
+
