@@ -139,3 +139,47 @@ Bu kodda 1 ve 2 argümanları kullanılarak her iki yer tutucunun da hassasiyeti
 Bu özellikler sayesinde verilerinizi daha okunabilir ve profesyonel bir şekilde sunabilirsiniz.
 
 İkisinin karşılıklı kullanımı örnek, 6_1.
+
+Rust dilinde println! makrosu ile formatlama yaparken, yer tutucuların hem padding (boşluk) hem de precision (hassasiyet) değerlerini parametreleştirmek mümkündür. 
+Bu, formatlama işlemini daha dinamik hale getirir.
+
+
+Örnek,
+
+```rust
+println!("Result: {2:<0$.1$} {3:.1$}", 10, 2, f1, f2);
+```
+
+Bu satırda, placeholders şu şekilde kullanılmıştır:
+
+- {2:<0$.1$}: Burada 2 numarası, f1 değişkenini temsil eder. < işareti, değerin sola yaslanmasını sağlar.
+-  0$, padding (boşluk) için kullanılacak olan ilk argümanı belirtir ve 1$, ondalık hassasiyeti belirten ikinci argümanı temsil eder.
+  
+- {3:.1$}: Burada 3 numarası, f2 değişkenini temsil eder. 1$, ondalık hassasiyetini belirten ikinci argümanı kullanır.
+
+- **Padding (Boşluk)**: 0$ ifadesi, ilk argümanın (bu durumda 10) kullanılacağını belirtir.
+- Bu, f1 değerinin toplam genişliğini belirler. Yani, f1 değeri bu genişliğe göre sola yaslanır.
+  
+- **Precision (Hassasiyet)**: 1$ ifadesi, ikinci argümanın (bu durumda 2) kullanılacağını belirtir. Bu, ondalık basamak sayısını belirler.
+
+
+Diyelim ki,
+
+```rust
+// f1 = 1.2345 ve f2 = 3.123456.
+// Yukarıdaki kod şöyle çalışır:
+
+let f1 = 1.2345;
+let f2 = 3.123456;
+println!("Result: {2:<0$.1$} {3:.1$}", 10, 2, f1, f2);
+```
+
+Burada:
+- 10 boşluk olarak kullanılır; yani f1 değeri toplamda 10 karakter genişliğinde olacak şekilde yazdırılır.
+- 2 ise ondalık basamak sayısını belirler; yani f2 değeri 2 ondalık basamakla yazdırılır.
+
+Çıktı,
+
+```
+Result: 1.23      3.12
+```
