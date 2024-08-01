@@ -137,3 +137,5 @@ Kod örneği, 5_9.
 
 Bu kodda 1 ve 2 argümanları kullanılarak her iki yer tutucunun da hassasiyeti iki basamak olarak ayarlanmıştır.
 Bu özellikler sayesinde verilerinizi daha okunabilir ve profesyonel bir şekilde sunabilirsiniz.
+
+İkisinin karşılıklı kullanımı örnek, 6_1.
