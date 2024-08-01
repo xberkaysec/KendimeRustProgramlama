@@ -123,7 +123,7 @@ Sözdizimi şu şekildedir: padding.precision. Eğer padding yoksa, sözdizimi s
 Tam sayılar için yer tutucudaki hassasiyet göz ardı edilir.
 
 
-5_7 kodda iki ondalık sayı gösterilmektedir.
+5_8 kodda iki ondalık sayı gösterilmektedir.
 İlk sayı, on karakter genişliğinde iki ondalık basamakla,
 ikinci sayı ise varsayılan genişlikte 6 ondalık basamakla görüntülenmektedir.
 
