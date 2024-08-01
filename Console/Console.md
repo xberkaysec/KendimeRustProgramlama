@@ -83,3 +83,22 @@ Bu argümanlar daha sonra format stringteki yer tutucular içinde kullanılabili
 Her isimli argümanlar ve konumsal argümanlar, format stringdeki yer tutucular içinde görünebilir. 
 Ancak, konumsal argümanlar parametre listesinde isimli argümanları takip edemez.
 5.6, konumsal argümanlardan önce ad, bir isimli argümandır ve println! makrosunda başka herhangi bir konumsal argümanlardan önce gelir.
+
+# Padding, Alignment, and Precision (Dolgu, Hizalama ve Hassasiyet)
+
+Format Stringde, placeholders'lerin padding'ini, hizalamasını veya sayısal hassasiyetini ayarlayabilirsiniz.
+Bu, profesyonel görünümlü görüntüler ve raporlar oluşturmak için harika bir özelliktir.
+Format spesifikasyonunu, placeholders'dan sonra gelen : (iki nokta) karakteriyle ince ayar yapabilirsiniz, yani {:format} şeklinde.
+
+Placeholders padding'ini veya sütun genişliğini ayarlamak için {:width} sözdizimini kullanırsınız. 
+Sütun içinde, sayısal değerler için varsayılan hizalama sağa hizalamadır.
+Metinler için ise varsayılan hizalama sola doğrudur.
+Varsayılan hizalamayı şu karakterlerle geçersiz kılabilirsiniz:
+
+```
+- > Sağ hizalama
+- < Sol hizalama
+- ^ Ortaya hizalama
+```
+ 
+5_7 kod örneği, bir placeholders genişliğini ve hizalamasını nasıl tanımlayacağınızı göstermektedir.
