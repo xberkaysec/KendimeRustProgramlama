@@ -127,3 +127,13 @@ Tam sayılar için yer tutucudaki hassasiyet göz ardı edilir.
 İlk sayı, on karakter genişliğinde iki ondalık basamakla,
 ikinci sayı ise varsayılan genişlikte 6 ondalık basamakla görüntülenmektedir.
 
+Ayrıca, hassasiyeti veya genişliği `$` karakteri ile parametreleştirebilirsiniz. 
+Format stringte $ karakterinin önüne, parametre listesindeki argümanın konumunu belirtmelisiniz.
+Aşağıdaki kodda, println! makrosu iki ondalık sayıyı göstermektedir.
+$ karakterlerinin yerleşimine dikkat edin; her biri hassasiyet tanımını bir argüman olarak belirlemektedir.
+Her iki placeholders için de hassasiyet sıfır olarak seçilmiş ve iki basamak olarak ayarlanmıştır.
+
+Kod örneği, 5_9.
+
+Bu kodda 1 ve 2 argümanları kullanılarak her iki yer tutucunun da hassasiyeti iki basamak olarak ayarlanmıştır.
+Bu özellikler sayesinde verilerinizi daha okunabilir ve profesyonel bir şekilde sunabilirsiniz.
